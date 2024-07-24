@@ -17,12 +17,12 @@ export default function Home() {
               Developer Intern at PT. Samakta Mitra
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
-              <Button as={Link} href={`/profile`} color="default" className="hover:bg-primary"> About me <MdArrowOutward/> </Button>
-              <Button as={Link} href={`/projects`} color="default" className="hover:bg-primary"> My Projects <MdArrowOutward/>  </Button>
-              <Button as={Link} href={`/experiences`} color="default" className="hover:bg-primary"> Experiences <MdArrowOutward/>  </Button>
+              <Button as={Link} href={`/profile`} color="primary" variant="flat" className="hover:bg-primary hover:text-white"> About me <MdArrowOutward/> </Button>
+              <Button as={Link} href={`/projects`} color="primary" variant="flat" className="hover:bg-primary hover:text-white"> My Projects <MdArrowOutward/>  </Button>
+              <Button as={Link} href={`/experiences`} color="primary" variant="flat" className="hover:bg-primary hover:text-white"> Experiences <MdArrowOutward/>  </Button>
             </div>
           </div>
-          <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] mb-10 md:mb-0 opacity-70">
+          <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] mb-10 md:mb-0 opacity-70 transition hover:opacity-80">
             <Image
               src="/images/rafibulet-modified.png"
               alt="rafi ardiel"
