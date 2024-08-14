@@ -18,15 +18,15 @@ export default function Home() {
           <div className="flex flex-col items-center md:items-start w-full md:w-full">
 
             <h1 className={`font-sans text-4xl font-medium`}>Hello<span className="text-blue-600">, World!</span></h1>
-            <HomeTypeWriter className="mt-2 font-medium"/>
+            <HomeTypeWriter className="mt-2"/>
             
-            <p className="text-md font-light text-gray-400 md:text-start text-center mb-6 mt-4">
+            <p className="text-md font-light text-gray-400 md:text-start text-center mb-6 mt-2">
               A Full-stack Developer specializing in Next.js and
               Django Rest Framework / Springboot. Currently a Web
               Developer Intern at <Link underline="always" href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="decoration-2 underline hover:decoration-red-500 text-gray-400"> PT. Samakta Mitra</Link> 
             </p>
 
-            <div className="flex justify-start gap-4 flex-wrap">
+            <div className="flex justify-center md:justify-start gap-4 flex-wrap">
               <Button as={Link} href={`/profile`} variant="bordered" className="shadow-lg shadow-blue-500/50 transition hover:scale-105 duration-150 hover:-translate-y-1 decoration-blue-500">
                 About me <MdArrowOutward />
               </Button>
