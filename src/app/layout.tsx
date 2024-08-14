@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark h-full">
-      <body className={`${inter.className} dark h-full`}>
+      <body className={`${inter.className} font-sans dark h-full`}>
         <Navbar></Navbar>
         <NextUIProvider>
           {children}
