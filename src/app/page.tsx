@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
-import HomeTypeWriter from "./components/HomeTypeWriter";
+import HomeTypeWriter from "@/components/HomeTypeWriter";
 import { Image } from "@nextui-org/image"
 import { MdArrowOutward } from "react-icons/md";
 import { Poppins, Space_Mono, JetBrains_Mono } from 'next/font/google';
@@ -23,7 +23,7 @@ export default function Home() {
             <p className="text-md font-light text-gray-300 md:text-start text-center mb-6 mt-2">
               A Full-stack Developer specializing in Next.js and
               Django Rest Framework / Springboot. Currently a Web
-              Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="decoration-2 hover:text-white underline transition-all duration-400 hover:decoration-red-500 text-gray-400"> PT. Samakta Mitra</Link> 
+              Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="underline-animation transition-colors duration-300 hover:text-white"> PT. Samakta Mitra</Link> 
             </p>
 
             <div className="flex justify-center md:justify-start gap-4 flex-wrap">
