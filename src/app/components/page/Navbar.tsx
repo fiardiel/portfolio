@@ -1,8 +1,10 @@
 'use client'
 
+import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -39,20 +41,23 @@ const Navbar = () => {
         <div className={`w-auto flex justify-center sticky md:top-0 z-50 lg:pt-8`}>
             <nav className={`lg:rounded-xl rounded-b-xl hidden md:flex lg:inline-flex border-1 md:w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/10 shadow-xl bg-neutral-800/30 backdrop-blur-xl'}  lg:justify-center`}>
                 <div className="w-full lg:w-[1024px] flex justify-between px-6">
-                    <div className="logo z-50">
-                        <Link href={'/'}>
-                            <p className={`text-2xl font-semibold`}>
-                                <span className="text-primary font-sans">@ </span>
-                                <span className="text-white">fiardiel</span>
-                            </p>
-                        </Link>
-                    </div>
-                    <div className="md:flex justify-between gap-4 items-center hidden z-50">
+                    <div className="z-50 items-center justify-between hidden gap-4 md:flex">
                         {menuItems.map((item, index) => (
                             <Link key={index} href={item.path}>
                                 <p className={`${isActive(item.path) ? 'text-primary font-semibold' : 'text-white underline-animation underline-animation-blue'}`}>{item.name}</p>
                             </Link>
                         ))}
+                    </div>
+                    <div className="z-50 logo">
+                        <Button
+                            as={Link}
+                            href="/"
+                            className="bg-black shadow-md transition-transform- hover:shadow-primary/50 hover:-translate-y-1 hover:scale-105 border-2 border-primary/20"
+                            variant="bordered"
+                            radius="full"
+                        >
+                            View Resume <MdArrowOutward/>
+                        </Button>
                     </div>
                 </div>
             </nav>
