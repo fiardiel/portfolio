@@ -15,7 +15,7 @@ const Reveal = ({ children, width = '100%' }: Props) => {
     if (isInView) {
       mainControls.start("visible")
     }
-  }, [isInView])
+  }, [isInView, mainControls])
 
   return (
     <motion.div
