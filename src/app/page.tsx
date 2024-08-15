@@ -3,12 +3,7 @@ import Link from "next/link";
 import HomeTypeWriter from "@/components/HomeTypeWriter";
 import { Image } from "@nextui-org/image"
 import { MdArrowOutward } from "react-icons/md";
-import { Poppins, Space_Mono, JetBrains_Mono } from 'next/font/google';
 import React from 'react'
- 
-const spaceMono = Space_Mono({ subsets: ["latin"], weight: '700' });
-const poppins = Poppins({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900' ] });
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ['100', '200', '300', '400', '500', '600', '700', '800' ] });
 
 export default function Home() {
   return (
