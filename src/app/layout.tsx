@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
-import Navbar from "./components/Navbar";
-import Navfoot from "./components/Navfoot";
+import Navbar from "./components/page/Navbar";
+import Navfoot from "./components/page/Navfoot";
 
 const inter = Inter({ subsets: ["latin"] });
 
