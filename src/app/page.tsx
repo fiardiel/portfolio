@@ -20,7 +20,7 @@ export default function Home() {
             <h1 className={`font-sans text-4xl font-medium`}>Hello<span className="text-blue-600">, World!</span></h1>
             <HomeTypeWriter className="mt-2"/>
             
-            <p className="text-md font-light text-gray-300 md:text-start text-center mb-6 mt-2">
+            <p className="text-md font-light text-gray-400 md:text-start text-center mb-6 mt-2">
               A Full-stack Developer specializing in Next.js and
               Django Rest Framework / Springboot. Currently a Web
               Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="underline-animation transition-colors duration-300 hover:text-white"> PT. Samakta Mitra</Link> 

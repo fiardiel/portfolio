@@ -1,14 +1,8 @@
 'use client'
 
-import { Poppins } from "next/font/google";
-import { Space_Mono } from 'next/font/google';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const spaceMono = Space_Mono({
-    subsets: ["latin"],
-    weight: '700'
-});
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -19,13 +13,28 @@ const Navbar = () => {
         }
         return pathname === path;
     };
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    const handleScroll = () => {
+        setIsScrolled(window.scrollY > 60)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [])
+
+
     return (
         <div className='w-full sticky md:top-0 z-50'>
-            <nav className={`hidden md:flex md:w-full z-48 items-center h-20 border-b border-white/5 shadow-xl bg-neutral-900/30 backdrop-blur-xl lg:justify-center`}>
+            <nav className={`hidden md:flex md:w-full z-48 items-center h-20 ${!isScrolled ? 'bg-transparent border-0' : 'border-b border-white/10 shadow-xl bg-neutral-900/30 backdrop-blur-xl'}  lg:justify-center`}>
                 <div className="w-full lg:w-[1024px] flex justify-between px-6">
                     <div className="logo z-50">
                         <Link href={'/'}>
-                            <p className={`${spaceMono.className} text-2xl font-extrabold`}>
+                            <p className={`text-2xl font-semibold`}>
                                 <span className="text-primary font-sans">@ </span>
                                 <span className="text-white">fiardiel</span>
                             </p>
