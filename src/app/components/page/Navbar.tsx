@@ -27,10 +27,17 @@ const Navbar = () => {
         }
     }, [])
 
+    const menuItems = [
+        { name: "Home", path: "/" },
+        { name: "Profile", path: "/profile" },
+        { name: "Projects", path: "/projects" },
+        { name: "Experiences", path: "/experiences" }
+    ]
+
 
     return (
-        <div className='w-full sticky md:top-0 z-50'>
-            <nav className={`hidden md:flex md:w-full z-48 items-center h-20 ${!isScrolled ? 'bg-transparent border-0' : 'border-b border-white/10 shadow-xl bg-neutral-900/30 backdrop-blur-xl'}  lg:justify-center`}>
+        <div className={`w-auto flex justify-center sticky md:top-0 z-50 lg:pt-8`}>
+            <nav className={`lg:rounded-xl rounded-b-xl hidden md:flex lg:inline-flex border-1 md:w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/10 shadow-xl bg-neutral-800/30 backdrop-blur-xl'}  lg:justify-center`}>
                 <div className="w-full lg:w-[1024px] flex justify-between px-6">
                     <div className="logo z-50">
                         <Link href={'/'}>
@@ -41,10 +48,11 @@ const Navbar = () => {
                         </Link>
                     </div>
                     <div className="md:flex justify-between gap-4 items-center hidden z-50">
-                        <Link className={`${isActive('/') ? 'text-primary font-semibold' : 'text-white'} transition hover:text-gray-400`} href={'/'}>Home</Link>
-                        <Link className={`${isActive('/profile') ? 'text-primary font-semibold' : 'text-white'} transition hover:text-gray-400`} href={'/profile'}>Profile</Link>
-                        <Link className={`${isActive('/projects') ? 'text-primary font-semibold' : 'text-white'} transition hover:text-gray-400`} href={'/projects'}>Projects</Link>
-                        <Link className={`${isActive('/experiences') ? 'text-primary font-semibold' : 'text-white'} transition hover:text-gray-400`} href={'/experiences'}>Experiences</Link>
+                        {menuItems.map((item, index) => (
+                            <Link key={index} href={item.path}>
+                                <p className={`${isActive(item.path) ? 'text-primary font-semibold' : 'text-white underline-animation underline-animation-blue'}`}>{item.name}</p>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </nav>
