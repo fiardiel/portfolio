@@ -29,7 +29,7 @@ const Top = () => {
             <p className="mt-2 mb-6 font-light text-center text-gray-400 text-lg md:text-start">
               A Full-stack Engineer specializing in Next.js and
               Django Rest Framework / Springboot. Currently a Web
-              Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red hover:text-white"> PT. Samakta Mitra</Link>
+              Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 underline md:no-underline decoration-red-500 underline-offset-2 md:underline-animation md:underline-animation-red hover:text-white"> PT. Samakta Mitra</Link>
             </p>
 
             <div className='flex justify-center gap-4 md:justify-start'>
@@ -57,7 +57,7 @@ const Top = () => {
               </Button>              
             </div>
           </div>
-          <div className="w-[200px] h-[200px] md:w-[280px] md:h-[280px] mb-10 md:mb-0 opacity-70 grayscale transition hover:grayscale-0 hover:opacity-100 md:self-start">
+          <div className="w-[250px] h-[250px] md:w-[280px] md:h-[280px] mb-10 md:mb-0 opacity-70 grayscale transition hover:grayscale-0 hover:opacity-100 md:self-start">
             <Image
               src="/images/rafibulet.png"
               alt="rafi ardiel"
