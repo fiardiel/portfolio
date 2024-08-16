@@ -6,15 +6,18 @@ import { Button } from '@nextui-org/react'
 import Link from 'next/link'
 import React from 'react'
 import { Image } from "@nextui-org/image"
-import { FaGithub, FaInstagram, FaLinkedin, FaSpotify } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { MdArrowOutward } from 'react-icons/md'
+import InstagramIcon from '@/components/icons/InstagramIcon'
+import SpotifyIcon from '@/components/icons/SpotifyIcon'
+import LinkedinIcon from '@/components/icons/LinkedinIcon'
 
 const Top = () => {
   const socialLinks = [
-    { name: "Github", icon: <FaGithub size={30}/>, href: "https://github.com/fiardiel" },
-    { name: "LinkedIn", icon: <FaLinkedin size={30}/>, href: "https://www.linkedin.com/in/rafiardiel" },
-    { name: "Instagram", icon: <FaInstagram size={30}/>, href: "https://www.instagram.com/fiardiel" },
-    { name: "Spotify", icon: <FaSpotify size={30}/>, href: "https://open.spotify.com/user/gv0uezdxkd6lpfd65kp8cy4ca?si=4e2f3d6a7ad649b4"},
+    { name: "Github", icon: <FaGithub size={30} />, href: "https://github.com/fiardiel" },
+    { name: "LinkedIn", icon: <LinkedinIcon className='h-[30px] w-[30px]'/> , href: "https://www.linkedin.com/in/rafiardiel" },
+    { name: "Instagram", icon: <InstagramIcon className='h-[30px] w-[30px]'/>, href: "https://www.instagram.com/fiardiel" },
+    { name: "Spotify", icon: <SpotifyIcon className='h-[30px] w-[30px]'/>, href: "https://open.spotify.com/user/gv0uezdxkd6lpfd65kp8cy4ca?si=4e2f3d6a7ad649b4"},
     
   ]
   return (
@@ -26,7 +29,7 @@ const Top = () => {
             <h1 className={`font-sans text-3xl lg:text-4xl font-medium`}>Hello<span className="text-blue-600">, World!</span></h1>
             <HomeTypeWriter className="" />
 
-            <p className="mt-2 mb-6 font-light text-center text-gray-400 text-lg md:text-start">
+            <p className="mt-2 mb-4 font-light text-center text-gray-400 text-lg md:text-start">
               A Full-stack Engineer specializing in Next.js and
               Django Rest Framework / Springboot. Currently a Web
               Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 underline md:no-underline decoration-red-500 underline-offset-2 md:underline-animation md:underline-animation-red hover:text-white"> PT. Samakta Mitra</Link>
@@ -39,7 +42,7 @@ const Top = () => {
                   href={item.href}
                   isIconOnly
                   size='lg'
-                  className="inline bg-white/0 text-neutral-400 hover:text-white">
+                  className={`text-neutral-400 hover:text-white transition-colors duration-300 inline hover:grayscale-0 grayscale bg-white/0 rounded-none `}>
                   {item.icon}
                 </Button>
               ))}
@@ -48,7 +51,7 @@ const Top = () => {
               <Button
                 as={Link}
                 href="/projects"
-                className="mt-2 shadow-lg shadow-primary"
+                className="shadow-lg shadow-primary"
                 variant="bordered"
                 radius="full"
                 size="lg"

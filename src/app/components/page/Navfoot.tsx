@@ -18,12 +18,12 @@ const Navfoot = () => {
     }
 
     return (
-        <div className='p-5 md:hidden sticky bottom-0'>
+        <div className='p-5 md:hidden sticky bottom-0 z-50'>
             <div className='flex items-center justify-around bg-neutral-800/40 border border-white/5 rounded-xl p-3 backdrop-blur-lg shadow-lg'>
                 <Button className={isActive('/') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/' as={NextLink}>{isActive('/') ? (
                     <GoHomeFill size={25} fill='white' /> ) : <GoHome size={25} fill='white' />} </Button>
-                <Button className={isActive('/profile') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/profile' as={NextLink}> { 
-                    isActive('/profile') ? <FaStar size={25} fill='white' /> : <FaRegStar size={25} fill='white' />
+                <Button className={isActive('/') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/#skills' as={NextLink}> { 
+                    isActive('/#skills') ? <FaStar size={25} fill='white' /> : <FaRegStar size={25} fill='white' />
                 } </Button>
                 <Button className={isActive('/projects') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/projects' as={NextLink}><HiMiniCodeBracket size={25} fill='white' /></Button>
                 <Button className={isActive('/experiences') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/experiences' as={NextLink}> {
