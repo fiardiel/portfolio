@@ -19,7 +19,7 @@ interface SkillsProps {
 
 const Skills = ({ className }: SkillsProps) => {
   return (
-    <div id='skills'>
+    <div id="skills">
       <Reveal>
         <div className={`flex flex-col w-full items-center md:items-start ${className}`}>
           <p className='text-3xl font-medium decoration-primary underline underline-offset-8'>Skills & Services</p>
@@ -58,7 +58,7 @@ const Skills = ({ className }: SkillsProps) => {
               <CardBody className='pt-0 items-center'>
                 <div className='flex flex-col items-center w-4/5'>
                   <p className='text-sm text-neutral-400 text-center'>
-                    I've built RESTful APIs and microservices using various programming languages and frameworks
+                    I&apos;ve built RESTful APIs and microservices using various programming languages and frameworks
                   </p>
                   <div className='flex flex-row items-center justify-center mt-7 gap-3 text-neutral-400'>
                     <FaPython size={28} />
@@ -81,7 +81,7 @@ const Skills = ({ className }: SkillsProps) => {
               <CardBody className='pt-0 items-center'>
                 <div className='flex flex-col items-center w-4/5'>
                   <p className='text-sm text-neutral-400 text-center'>
-                    I've done machine learning classification, regression, and clustering tasks using the below tools that I use
+                    I&apos;ve done machine learning classification, regression, and clustering tasks using the below tools that I use
                   </p>
                   <div className='flex flex-row items-center justify-center mt-7 gap-3 text-neutral-400'>
                     <FaPython size={28} />

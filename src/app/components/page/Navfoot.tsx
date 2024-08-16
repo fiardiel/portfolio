@@ -6,6 +6,7 @@ import { GoHome, GoHomeFill } from 'react-icons/go';
 import { MdPerson, MdPersonOutline } from 'react-icons/md';
 import { HiBriefcase, HiMiniCodeBracket, HiOutlineBriefcase } from 'react-icons/hi2';
 import { Button } from '@nextui-org/react';
+import { FaRegStar, FaStar } from "react-icons/fa";
 
 const Navfoot = () => {
     const pathname = usePathname();
@@ -22,7 +23,7 @@ const Navfoot = () => {
                 <Button className={isActive('/') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/' as={NextLink}>{isActive('/') ? (
                     <GoHomeFill size={25} fill='white' /> ) : <GoHome size={25} fill='white' />} </Button>
                 <Button className={isActive('/profile') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/profile' as={NextLink}> { 
-                    isActive('/profile') ? <MdPerson size={25} fill='white' /> : <MdPersonOutline size={25} fill='white' />
+                    isActive('/profile') ? <FaStar size={25} fill='white' /> : <FaRegStar size={25} fill='white' />
                 } </Button>
                 <Button className={isActive('/projects') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/projects' as={NextLink}><HiMiniCodeBracket size={25} fill='white' /></Button>
                 <Button className={isActive('/experiences') ? 'bg-primary p-2' : 'bg-transparent'} isIconOnly href='/experiences' as={NextLink}> {

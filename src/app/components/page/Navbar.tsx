@@ -33,9 +33,9 @@ const Navbar = () => {
     const menuItems = [
         { name: "Home", path: "/" },
         { name: "Skills", path: "/#skills" },
-        { name: "Profile", path: "/profile" },
-        { name: "Projects", path: "/projects" },
-        { name: "Experiences", path: "/experiences" },
+        // { name: "Profile", path: "/profile" },
+        // { name: "Projects", path: "/projects" },
+        // { name: "Experiences", path: "/experiences" },
     ]
 
 
