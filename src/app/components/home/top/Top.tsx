@@ -11,10 +11,11 @@ import { MdArrowOutward } from 'react-icons/md'
 import InstagramIcon from '@/components/icons/InstagramIcon'
 import SpotifyIcon from '@/components/icons/SpotifyIcon'
 import LinkedinIcon from '@/components/icons/LinkedinIcon'
+import GithubIcon from '@/components/icons/GithubIcon'
 
 const Top = () => {
   const socialLinks = [
-    { name: "Github", icon: <FaGithub size={30} />, href: "https://github.com/fiardiel" },
+    { name: "Github", icon: <GithubIcon className='h-[30px] w-[30px]' />, href: "https://github.com/fiardiel" },
     { name: "LinkedIn", icon: <LinkedinIcon className='h-[30px] w-[30px]'/> , href: "https://www.linkedin.com/in/rafiardiel" },
     { name: "Instagram", icon: <InstagramIcon className='h-[30px] w-[30px]'/>, href: "https://www.instagram.com/fiardiel" },
     { name: "Spotify", icon: <SpotifyIcon className='h-[30px] w-[30px]'/>, href: "https://open.spotify.com/user/gv0uezdxkd6lpfd65kp8cy4ca?si=4e2f3d6a7ad649b4"},
