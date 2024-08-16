@@ -23,16 +23,16 @@ const Top = () => {
   return (
     <div id='top'>
       <Reveal>
-        <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-16 lg:gap-24 flex flex-col-reverse items-center">
+        <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-10 lg:gap-16 flex flex-col-reverse items-center">
           <div className="flex flex-col items-center w-full md:items-start md:w-full">
 
             <h1 className={`font-sans text-3xl lg:text-4xl font-medium`}>Hello<span className="text-blue-600">, World!</span></h1>
-            <HomeTypeWriter className="" />
+            <HomeTypeWriter className="font-semibold h-24 md:h-auto mt-2 md:mt-0" />
 
-            <p className="mt-2 mb-4 font-light text-center text-gray-400 text-lg md:text-start">
+            <p className="mb-4 mt-2 font-light text-center text-gray-400 text-lg md:text-start">
               A Full-stack Engineer specializing in Next.js and
               Django Rest Framework / Springboot. Currently a Web
-              Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 underline md:no-underline decoration-red-500 underline-offset-2 md:underline-animation md:underline-animation-red hover:text-white"> PT. Samakta Mitra</Link>
+              Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red text-white md:text-neutral-400 hover:text-white"> PT. Samakta Mitra</Link>
             </p>
 
             <div className='flex justify-center gap-4 md:justify-start'>

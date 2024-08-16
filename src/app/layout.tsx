@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
-import Navbar from "./components/page/Navbar";
-import Navfoot from "./components/page/Navfoot";
+import Navbar from "@/components/page/Navbar";
+import SmallNavbar from "@/components/page/SmallNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark h-full scroll-smooth">
-      <body className={`${inter.className} font-sans dark h-full`}>
-        <Navbar></Navbar>
+      <body className={`${inter.className} font-sans dark`}>
+        <Navbar/>
+        <SmallNavbar/>
         <NextUIProvider>
           {children}
         </NextUIProvider>
-        <Navfoot></Navfoot>
       </body>
     </html>
   );

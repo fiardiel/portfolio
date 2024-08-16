@@ -10,7 +10,7 @@ interface HomeTypeWriterProps {
 
 const HomeTypeWriter: React.FC<HomeTypeWriterProps> = ({className}) => {
     return (
-        <div className={`text-4xl lg:text-5xl md:text-start text-center ${className}`}>
+        <div className={`text-4xl md:px-0 md:text-[32px] leading-10 lg:text-5xl md:text-start text-center ${className}`}>
             <TypeIt options={{
                 strings: [
                     "I'm Rafi Ardiel Erinaldi 👋",
