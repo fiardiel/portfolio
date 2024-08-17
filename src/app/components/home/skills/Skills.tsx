@@ -34,7 +34,7 @@ const Skills = ({ className }: SkillsProps) => {
     },
     {
       title: 'Data Science',
-      description: 'I\'ve done machine learning classification, regression, and clustering tasks using the below tools that I use',
+      description: 'I\'ve done machine learning classification, regression, and clustering, including NLP, and Knowledge Graph datasets',
       icons: [<FaPython size={26} key="python" />, <BiLogoPostgresql size={26} key="postgresql" />, <SiPandas size={26} key="pandas" />, <SiNumpy size={26} key="numpy" />, <LogosSeabornIcon className={`h-[26px] grayscale`} key="seaborn" />, <ScikitLearnLogo className={`h-[28px] grayscale`} key="scikit-learn" />],
       logo: <DataScienceIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
     }
