@@ -6,7 +6,6 @@ import { Button } from '@nextui-org/react'
 import { Link } from '@nextui-org/react'
 import React from 'react'
 import { Image } from "@nextui-org/image"
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { MdArrowOutward } from 'react-icons/md'
 import InstagramIcon from '@/components/icons/InstagramIcon'
 import SpotifyIcon from '@/components/icons/SpotifyIcon'
@@ -15,10 +14,10 @@ import GithubIcon from '@/components/icons/GithubIcon'
 
 const Top = () => {
   const socialLinks = [
-    { name: "Github", icon: <GithubIcon className='h-[30px] w-[30px]' />, href: "https://github.com/fiardiel" },
-    { name: "LinkedIn", icon: <LinkedinIcon className='h-[30px] w-[30px]'/> , href: "https://www.linkedin.com/in/rafiardiel" },
-    { name: "Instagram", icon: <InstagramIcon className='h-[30px] w-[30px]'/>, href: "https://www.instagram.com/fiardiel" },
-    { name: "Spotify", icon: <SpotifyIcon className='h-[30px] w-[30px]'/>, href: "https://open.spotify.com/user/gv0uezdxkd6lpfd65kp8cy4ca?si=4e2f3d6a7ad649b4"},
+    { name: "Github", icon: <GithubIcon  />, href: "https://github.com/fiardiel" },
+    { name: "LinkedIn", icon: <LinkedinIcon /> , href: "https://www.linkedin.com/in/rafiardiel" },
+    { name: "Instagram", icon: <InstagramIcon />, href: "https://www.instagram.com/fiardiel" },
+    { name: "Spotify", icon: <SpotifyIcon />, href: "https://open.spotify.com/user/gv0uezdxkd6lpfd65kp8cy4ca?si=4e2f3d6a7ad649b4"},
     
   ]
   return (
@@ -39,7 +38,7 @@ const Top = () => {
             <div className='flex justify-center md:justify-start gap-4'>
               {socialLinks.map((item, index) => (
                 <Link key={index} href={item.href} className='transition grayscale hover:opacity-100 hover:grayscale-0'>
-                  <div>
+                  <div className='h-[30px] w-[30px]'>
                     {item.icon}
                   </div>
                 </Link>
