@@ -7,6 +7,7 @@ import { Button } from '@nextui-org/react';
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { IoIosCall, IoMdPerson } from "react-icons/io";
 import { MdOutlinePerson } from "react-icons/md";
+import { useEffect, useState } from "react";
 
 interface menuItem { 
     name: string
@@ -23,9 +24,22 @@ const SmallNavbar = () => {
         { name: 'About', href: '#about', icon: <MdOutlinePerson size={25}/> },
     ]
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    const handleScroll = () => {
+        setIsScrolled(window.scrollY > 60)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [])
+
     return (
         <div className='p-2 px-5 md:hidden sticky top-0 z-50'>
-            <div className=' bg-neutral-800/40 border border-white/5 rounded-full p-3 backdrop-blur-lg shadow-lg'>
+            <div className={`transition duration-500 bg-transparent p-3 ${!isScrolled ? 'bg-transparent border-transparent' : 'border border-white/5 shadow-xl bg-neutral-800/40 backdrop-blur-md rounded-full'}`}>
                 <div className="flex justify-between">
                     <div className="flex justify-start items-center gap-2">
                         {menuItems.map((item, index) => (

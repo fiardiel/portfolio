@@ -36,14 +36,14 @@ const Top = () => {
               Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red text-white md:text-neutral-400 hover:text-white"> PT. Samakta Mitra</Link>
             </p>
 
-            <div className='flex justify-center gap-4 md:justify-start'>
+            <div className='flex justify-center gap-2 md:justify-start'>
               {socialLinks.map((item, index) => (
                 <Button key={index}
                   as={Link}
                   href={item.href}
                   isIconOnly
                   size='lg'
-                  className={`text-neutral-400 hover:text-white transition-colors duration-300 inline hover:grayscale-0 grayscale bg-white/0 rounded-none `}>
+                  className={`h-auto w-[30px] text-neutral-400 hover:text-white transition-colors duration-300 inline hover:grayscale-0 grayscale bg-white/0 rounded-none `}>
                   {item.icon}
                 </Button>
               ))}
@@ -52,7 +52,7 @@ const Top = () => {
               <Button
                 as={Link}
                 href="/projects"
-                className="shadow-lg shadow-primary"
+                className="shadow-lg shadow-primary mt-6  "
                 variant="bordered"
                 radius="full"
                 size="lg"
