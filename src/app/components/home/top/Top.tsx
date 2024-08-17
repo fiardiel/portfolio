@@ -24,7 +24,7 @@ const Top = () => {
   return (
     <div id='top'>
       <Reveal>
-        <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-10 lg:gap-16 flex flex-col-reverse items-center">
+        <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-6 lg:gap-16 flex flex-col-reverse items-center">
           <div className="flex flex-col items-center w-full md:items-start md:w-full">
 
             <h1 className={`font-sans text-3xl lg:text-4xl font-medium`}>Hello<span className="text-blue-600">, World!</span></h1>

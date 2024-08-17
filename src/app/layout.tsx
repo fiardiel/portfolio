@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { NextUIProvider } from "@nextui-org/react";
+import "@/globals.css";
 import Navbar from "@/components/page/Navbar";
 import SmallNavbar from "@/components/page/SmallNavbar";
+import Providers from "@/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark h-full scroll-smooth">
-      <body className={`${inter.className} font-sans dark`}>
-        <Navbar/>
-        <SmallNavbar/>
-        <NextUIProvider>
+    <html lang="en" className="h-full scroll-smooth dark">
+      <body className={`${inter.className} font-sans dark bg-black text-foreground`}>
+        <Navbar />
+        <SmallNavbar />
+        <Providers>
           {children}
-        </NextUIProvider>
+        </Providers>
       </body>
     </html>
   );

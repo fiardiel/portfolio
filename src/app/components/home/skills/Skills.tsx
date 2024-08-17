@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Card, CardHeader, CardBody } from "@nextui-org/card";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { RiNextjsFill, RiTailwindCssFill, RiVuejsFill } from 'react-icons/ri';
 import { SiDjango, SiNumpy, SiPandas, SiTypescript, SiVite } from 'react-icons/si';
 import { FaCss3Alt, FaHtml5, FaJava, FaPython } from 'react-icons/fa';
@@ -35,7 +35,7 @@ const Skills = ({ className }: SkillsProps) => {
     {
       title: 'Data Science',
       description: 'I\'ve done machine learning classification, regression, and clustering tasks using the below tools that I use',
-      icons: [<FaPython size={28} key="python" />, <BiLogoPostgresql size={28} key="postgresql" />, <SiPandas size={28} key="pandas" />, <SiNumpy size={28} key="numpy" />, <LogosSeabornIcon className={`h-[28px] grayscale`} key="seaborn" />, <ScikitLearnLogo className={`h-[40px] grayscale`} key="scikit-learn" />],
+      icons: [<FaPython size={26} key="python" />, <BiLogoPostgresql size={26} key="postgresql" />, <SiPandas size={26} key="pandas" />, <SiNumpy size={26} key="numpy" />, <LogosSeabornIcon className={`h-[26px] grayscale`} key="seaborn" />, <ScikitLearnLogo className={`h-[28px] grayscale`} key="scikit-learn" />],
       logo: <DataScienceIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
     }
   ]
@@ -47,7 +47,7 @@ const Skills = ({ className }: SkillsProps) => {
           <p className='text-3xl font-medium decoration-primary underline underline-offset-8'>Skills & Services</p>
           <div className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
             {skills.map((skill, index) => (
-              <Card key={index} className='p-3 border-1 border-white/10 hover:border-white/20 hover:bg-neutral-800'>
+              <Card key={index} className='w-4/5 md:w-full md:h-96 p-3 border-1 border-white/10 hover:border-white/20 hover:bg-neutral-800'>
                 <CardHeader className='justify-center'>
                   <div className='flex flex-col items-center space-y-3'>
                     {skill.logo}
@@ -59,13 +59,13 @@ const Skills = ({ className }: SkillsProps) => {
                     <p className='text-sm text-neutral-400 text-center'>
                       {skill.description}
                     </p>
-                    <div className='flex flex-row items-center justify-center mt-7 gap-3 text-neutral-400'>
-                      {skill.icons.map((icon, index) => (
-                        <div key={index}>{icon}</div>
-                      ))}
-                    </div>
                   </div>
                 </CardBody>
+                <CardFooter className='text-neutral-400 justify-center gap-3 flex-wrap md:flex-nowrap'>
+                  {skill.icons.map((icon, index) => (
+                    <div key={index}>{icon}</div>
+                  ))}
+                </CardFooter>
               </Card>
             ))}
           </div>
