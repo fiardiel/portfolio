@@ -3,7 +3,7 @@
 import HomeTypeWriter from '@/components/home/top/HomeTypeWriter'
 import Reveal from '@/components/utils/Reveal'
 import { Button } from '@nextui-org/react'
-import Link from 'next/link'
+import { Link } from '@nextui-org/react'
 import React from 'react'
 import { Image } from "@nextui-org/image"
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
@@ -24,7 +24,7 @@ const Top = () => {
   return (
     <div id='top'>
       <Reveal>
-        <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-6 lg:gap-16 flex flex-col-reverse items-center">
+        <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-6 lg:gap-12 flex flex-col-reverse items-center">
           <div className="flex flex-col items-center w-full md:items-start md:w-full">
 
             <h1 className={`font-sans text-3xl lg:text-4xl font-medium`}>Hello<span className="text-blue-600">, World!</span></h1>
@@ -36,23 +36,20 @@ const Top = () => {
               Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red text-white md:text-neutral-400 hover:text-white"> PT. Samakta Mitra</Link>
             </p>
 
-            <div className='flex justify-center gap-2 md:justify-start'>
+            <div className='flex justify-center md:justify-start gap-4'>
               {socialLinks.map((item, index) => (
-                <Button key={index}
-                  as={Link}
-                  href={item.href}
-                  isIconOnly
-                  size='lg'
-                  className={`h-auto w-[30px] text-neutral-400 hover:text-white transition-colors duration-300 inline hover:grayscale-0 grayscale bg-white/0 rounded-none `}>
-                  {item.icon}
-                </Button>
+                <Link key={index} href={item.href} className='transition grayscale hover:opacity-100 hover:grayscale-0'>
+                  <div>
+                    {item.icon}
+                  </div>
+                </Link>
               ))}
             </div>
             <div>
               <Button
                 as={Link}
                 href="/projects"
-                className="shadow-lg shadow-primary mt-6  "
+                className="shadow-lg shadow-primary mt-6"
                 variant="bordered"
                 radius="full"
                 size="lg"
