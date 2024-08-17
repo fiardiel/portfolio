@@ -28,7 +28,7 @@ const Skills = ({ className }: SkillsProps) => {
     },
     {
       title: 'Back-end Engineering',
-      description: 'I\'ve built RESTful APIs and microservices using various languages and frameworks',
+      description: 'I\'ve built RESTful APIs and backends for various applications using various frameworks and languages',
       icons: [<FaPython size={28} key="python" />, <BiLogoPostgresql size={28} key="postgresql" />, <FaGolang size={30} key="golang" />, <FaJava size={28} key="java" />, <SiDjango size={25} key="django" />, <BiLogoSpringBoot size={28} key="springboot" />],
       logo: <BackendIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
     },

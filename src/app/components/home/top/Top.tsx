@@ -23,7 +23,7 @@ const Top = () => {
   return (
     <div id='top'>
       <Reveal>
-        <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-6 lg:gap-12 flex flex-col-reverse items-center">
+        <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-6] lg:gap-12 flex flex-col-reverse items-center">
           <div className="flex flex-col items-center w-full md:items-start md:w-full">
 
             <h1 className={`font-sans text-3xl lg:text-4xl font-medium`}>Hello<span className="text-blue-600">, World!</span></h1>
@@ -32,7 +32,7 @@ const Top = () => {
             <p className="mb-4 mt-2 font-light text-center text-gray-400 text-lg md:text-start">
               A Full-stack Engineer specializing in Next.js and
               Django Rest Framework / Springboot. Currently a Web
-              Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red text-white md:text-neutral-400 hover:text-white"> PT. Samakta Mitra</Link>
+              Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="transition-colors duration-300 hover:opacity-100 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red text-white md:text-neutral-400 hover:text-white"> PT. Samakta Mitra</Link>
             </p>
 
             <div className='flex justify-center md:justify-start gap-4'>
