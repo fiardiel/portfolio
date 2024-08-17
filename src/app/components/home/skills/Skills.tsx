@@ -72,8 +72,6 @@ const Skills = ({ className }: SkillsProps) => {
         </div>
       </Reveal>
     </div>
-
-
   )
 }
 
