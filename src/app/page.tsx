@@ -1,6 +1,7 @@
 import React from 'react'
 import Top from '@/components/home/top/Top';
 import Skills from '@/components/home/skills/Skills';
+import Projects from '@/components/home/projects/Projects';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <div className="flex flex-col justify-center md:flex md:items-center w-full lg:w-[1024px] px-0 lg:px-6 py-10 md:pt-16 pt-5">
         <Top />
         <Skills className='mt-20'/>
+        <Projects className='mt-20'/>
       </div>
     </main>
   );

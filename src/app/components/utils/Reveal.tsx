@@ -4,9 +4,10 @@ import { motion, useInView, useAnimation } from "framer-motion";
 interface Props {
   children: React.ReactNode;
   width?: "fit-content" | "100%"
+  className?: string
 }
 
-const Reveal = ({ children, width = '100%' }: Props) => {
+const Reveal = ({ children, width = '100%', className }: Props) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })  
   const mainControls = useAnimation()
@@ -28,9 +29,10 @@ const Reveal = ({ children, width = '100%' }: Props) => {
       initial="hidden"
       animate={mainControls}
       transition={{ duration: 0.5 }}
+      className={className}
     >
       {children}
-    </motion.div>
+  </motion.div>
   )
 }
 
