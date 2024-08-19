@@ -41,7 +41,7 @@ const Navbar = () => {
 
     return (
         <div className={`w-auto flex justify-center sticky md:top-0 z-50 lg:pt-5`}>
-            <nav className={`lg:rounded-lg hidden md:flex lg:inline-flex border-1 md:w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-800/60 backdrop-blur-md'}  lg:justify-center`}>
+            <nav className={`lg:rounded-lg hidden md:flex lg:inline-flex border-1 md:w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-900/60 backdrop-blur-md'}  lg:justify-center`}>
                 <div className="w-full lg:w-[1024px] flex justify-between px-6">
                     <div className="z-50 items-center justify-between hidden gap-4 md:flex">
                         {menuItems.map((item, index) => (
