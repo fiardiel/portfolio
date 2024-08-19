@@ -59,7 +59,7 @@ const Projects = ({ className }: { className: string }) => {
           {projects.map((project, index) => (
             <Reveal key={index} className='flex justify-center h-full'>
               <div className='w-full h-full'>
-                <Card radius='sm' className='w-full bg-transparent border-2 border-neutral-700/50 hover:border-neutral-700/60 hover:bg-neutral-950 h-full'>
+                <Card radius='sm' className='w-full bg-transparent border-2 border-neutral-700/60 hover:border-neutral-700/70 hover:bg-neutral-950 h-full'>
                   <CardHeader className='flex flex-col items-start p-0'>
                     <div className='w-full aspect-w-16 aspect-h-9'>
                       <NextImage removeWrapper className='absolute object-cover w-full h-full rounded-sm rounded-b-none' src={project.img ? `/images/projects/${project.img}` : fallbackSrc} fallbackSrc={fallbackSrc} />
