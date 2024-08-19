@@ -9,7 +9,7 @@ interface Props {
 
 const Reveal = ({ children, width = '100%', className }: Props) => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })  
+  const isInView = useInView(ref, {amount: 0.2, once: true })  
   const mainControls = useAnimation()
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Reveal = ({ children, width = '100%', className }: Props) => {
       }}
       initial="hidden"
       animate={mainControls}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
       className={className}
     >
       {children}

@@ -42,35 +42,37 @@ const Skills = ({ className }: SkillsProps) => {
 
   return (
     <div id="skills">
-      <Reveal>
-        <div className={`flex flex-col w-full items-center md:items-start ${className}`}>
+      <div className={`flex flex-col w-full items-center md:items-start ${className}`}>
+        <Reveal className='text-center md:text-start'>
           <p className='text-3xl font-medium decoration-primary underline underline-offset-8'>Skills & Services</p>
+        </Reveal>
           <div className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
             {skills.map((skill, index) => (
-              <Card key={index} radius='sm' className='w-full md:h-96 p-3 border-1 border-white/10 hover:border-white/20 hover:bg-neutral-800'>
-                <CardHeader className='justify-center'>
-                  <div className='flex flex-col items-center space-y-3'>
-                    {skill.logo}
-                    <p className='text-xl'>{skill.title}</p>
-                  </div>
-                </CardHeader>
-                <CardBody className='pt-0 items-center'>
-                  <div className='flex flex-col items-center'>
-                    <p className='text-sm text-neutral-400 text-center'>
-                      {skill.description}
-                    </p>
-                  </div>
-                </CardBody>
-                <CardFooter className='text-neutral-400 justify-center gap-3 flex-wrap md:flex-nowrap'>
-                  {skill.icons.map((icon, index) => (
-                    <div key={index}>{icon}</div>
-                  ))}
-                </CardFooter>
-              </Card>
+              <Reveal key={index}>
+                <Card radius='sm' className='w-full md:h-96 p-3 border-1 border-white/10 hover:border-white/20 hover:bg-neutral-800'>
+                  <CardHeader className='justify-center'>
+                    <div className='flex flex-col items-center space-y-3'>
+                      {skill.logo}
+                      <p className='text-xl'>{skill.title}</p>
+                    </div>
+                  </CardHeader>
+                  <CardBody className='pt-0 items-center'>
+                    <div className='flex flex-col items-center'>
+                      <p className='text-sm text-neutral-400 text-center'>
+                        {skill.description}
+                      </p>
+                    </div>
+                  </CardBody>
+                  <CardFooter className='text-neutral-400 justify-center gap-3 flex-wrap md:flex-nowrap'>
+                    {skill.icons.map((icon, index) => (
+                      <div key={index}>{icon}</div>
+                    ))}
+                  </CardFooter>
+                </Card>
+              </Reveal>
             ))}
           </div>
         </div>
-      </Reveal>
     </div>
   )
 }
