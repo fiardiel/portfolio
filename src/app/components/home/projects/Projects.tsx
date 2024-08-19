@@ -10,7 +10,36 @@ import { mapIcon } from '@/components/utils/IconMapper'
 
 const Projects = ({ className }: { className: string }) => {
   const projects = [
-    { name: 'PT. Samakta Mitra Company Profile', description: 'Created the front-end and back-end of the article page of Samakta Mitra\'s company profile web page', img: '/images/projects/sam-web.png', githubLink: 'fiardiel/sam-web/', toolIcons: ['vue', 'vite', 'tailwind', 'typescript', 'python', 'directus']}, 
+    {
+      name: 'fiardiel\'s Portfolio',
+      description: 'Self explanatory. Pretty much this website. Built with the famous Next.js and TailwindCSS and hosted on Vercel',
+      img: 'portfolio.png',
+      githubLink: 'fiardiel/portfolio/',
+      projectLink: 'https://fiardiel-portfolio.vercel.app',
+      toolIcons: ['nextJS', 'tailwind', 'typescript'],
+      isProjectDisabled: false,
+      isGithubDisabled: false
+    }, 
+    {
+      name: 'PT. Samakta Mitra Company Profile',
+      description: 'Created the front-end and back-end of the article page of Samakta Mitra\'s company profile web page',
+      img: 'sam-web.png',
+      projectLink: 'https://samakta-mitra.vercel.app/',
+      githubLink: 'fiardiel/sam-web/',
+      toolIcons: ['vue', 'vite', 'tailwind', 'typescript', 'python', 'directus'],
+      isProjectDisabled: true,
+      isGithubDisabled: true
+    }, 
+    {
+      name: 'FlexTime',
+      description: 'A rework project, originally by github.com/rice-science. A gym session planning app built for thriving students that want to keep their body in shape',
+      img: '',
+      githubLink: 'fiardiel/flextime-fe/',
+      projectLink: 'https://samakta-mitra.vercel.app/',
+      toolIcons: ['nextJS', 'tailwind', 'typescript', 'python'],
+      isProjectDisabled: true,
+      isGithubDisabled: false
+    }, 
   ]
 
   return (
@@ -23,41 +52,49 @@ const Projects = ({ className }: { className: string }) => {
         </Reveal>
         <div className='flex flex-col items-center mt-5 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 w-full'>
           {projects.map((project, index) => (
-            <Reveal key={index} className='flex justify-center'>
-              <Card radius='sm' className='h-[450px] sm:h-[510px] md:h-[500px] lg:h-[450px] w-4/5 md:w-full border-2 border-neutral-700/50 hover:-translate-y-2'>
-                <CardHeader className='flex flex-col items-start p-0'>
-                  <div className='w-full aspect-w-16 aspect-h-8 md:aspect-w-6 md:aspect-h-3'>
-                    <NextImage removeWrapper className='absolute object-cover w-full h-full rounded-sm rounded-b-none' src={project.img} />
-                  </div>
-                </CardHeader>
-                <CardBody className='items-start p-5 pb-0'>
-                  <div className='flex flex-row gap-2 h-[22px]'>
-                    {project.toolIcons.map((icon) => (
-                      <div key={icon} className='h-[22px] w-[22px] text-neutral-400'>
-                        {mapIcon(icon, 'w-full h-full')} 
-                      </div>
-                    ))}
-                  </div>
-                  <p className='text-xl font-medium leading-7 line-clamp-2 mt-5'>
-                    {project.name}
-                  </p>
-                  <p className='mt-2 line-clamp-3 text-neutral-400'>
-                    {project.description}
-                  </p>
-                </CardBody>
-                <CardFooter className='justify-between p-5 pt-0'>
-                  <div className=''>
-                    <Link isDisabled href={``} className='flex gap-2 underline-animation-blue underline-animation text-neutral-400 hover:text-white transition-colors hover:opacity-100 duration-300'>
-                      See Project <MdArrowOutward size={15}/>
-                    </Link>
-                  </div>
-                  <div className=''>
-                    <Link href={`https://github.com/${project.githubLink}`} className='transition grayscale hover:opacity-100 hover:grayscale-0'>
-                      <GithubIcon className='h-7' />
-                    </Link>
-                  </div>
-                </CardFooter>
-              </Card>
+            <Reveal key={index} className='flex justify-center h-full'>
+              <div className='w-full h-full'>
+                <Card radius='sm' className='w-full border-2 border-neutral-700/50 hover:-translate-y-2 h-full'>
+                  <CardHeader className='flex flex-col items-start p-0'>
+                    <div className='w-full aspect-w-16 aspect-h-9'>
+                      <NextImage removeWrapper className='absolute object-cover w-full h-full rounded-sm rounded-b-none' src={`/images/projects/${project.img}`} />
+                    </div>
+                  </CardHeader>
+                  <CardBody className='items-start p-5 pb-0'>
+                    <div className='flex flex-row gap-2 h-[22px]'>
+                      {project.toolIcons.map((icon) => (
+                        <div key={icon} className='h-[22px] w-[22px] text-neutral-400'>
+                          {mapIcon(icon, 'w-full h-full')}
+                        </div>
+                      ))}
+                    </div>
+                    <p className='text-white text-xl font-medium leading-7 line-clamp-2 mt-5'>
+                      {project.name}
+                    </p>
+                    <p className='mt-2 line-clamp-5 text-neutral-400'>
+                      {project.description}
+                    </p>
+                  </CardBody>
+                  <CardFooter className='justify-between p-5'>
+                    <div className=''>
+                      {!project.isProjectDisabled ? (
+                        <Link href={project.projectLink} className='transition-colors duration-300 flex gap-2 underline-animation underline-animation-blue text-primary-600 hover:text-white'>
+                          View Project <MdArrowOutward size={20}/>
+                        </Link>
+                      ) :
+                      (
+                        <p className='text-yellow-200 opacity-70'>Ongoing</p>
+                      )
+                      }
+                    </div>
+                    <div className=''>
+                      <Link isDisabled={project.isGithubDisabled} href={`https://github.com/${project.githubLink}`} className='transition grayscale hover:opacity-100 hover:grayscale-0'>
+                        <GithubIcon color='#ffffff' className='h-7' />
+                      </Link>
+                    </div>
+                  </CardFooter>
+                </Card>
+              </div>
             </Reveal>
           ))}
         </div>
