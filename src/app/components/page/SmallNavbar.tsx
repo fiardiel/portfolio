@@ -39,7 +39,7 @@ const SmallNavbar = () => {
 
     return (
         <div className='p-2 px-5 md:hidden sticky top-0 z-50'>
-            <div className={`transition duration-500 bg-transparent p-3 ${!isScrolled ? 'bg-transparent border-transparent' : 'border border-white/5 shadow-xl bg-neutral-800/60 backdrop-blur-md rounded-full'}`}>
+            <div className={`transition duration-500 bg-transparent p-3 ${!isScrolled ? 'bg-transparent border-transparent' : 'border border-white/5 shadow-lg bg-neutral-800/60 backdrop-blur-md rounded-lg'}`}>
                 <div className="flex justify-between">
                     <div className="flex justify-start items-center gap-2">
                         {menuItems.map((item, index) => (
@@ -49,7 +49,7 @@ const SmallNavbar = () => {
                         ))}                        
                     </div>
                     <div className="flex items-center">
-                        <Button isIconOnly radius="full" variant="bordered" as={Link} href="#contact" className="border-primary/30 bg-transparent shadow-lg shadow-primary/50">
+                        <Button isIconOnly color="primary"  as={Link} href="#contact" className="">
                             <IoIosCall size={20}/>
                         </Button>
                     </div>

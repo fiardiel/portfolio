@@ -6,7 +6,6 @@ import { Image as NextImage } from '@nextui-org/react'
 import Reveal from '@/components/utils/Reveal'
 import { mapIcon } from '@/components/utils/IconMapper'
 import { FiGithub } from 'react-icons/fi'
-import { FaArrowRight } from 'react-icons/fa'
 import { MdArrowForwardIos } from 'react-icons/md'
 
 const Projects = ({ className }: { className: string }) => {

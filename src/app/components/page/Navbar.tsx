@@ -41,7 +41,7 @@ const Navbar = () => {
 
     return (
         <div className={`w-auto flex justify-center sticky md:top-0 z-50 pt-2 lg:pt-5`}>
-            <nav className={`rounded-full hidden md:flex lg:inline-flex border-1 md:w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-900/40 backdrop-blur-md'}  lg:justify-center`}>
+            <nav className={`rounded-lg hidden md:flex lg:inline-flex border-1 md:w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-800/60 backdrop-blur-md'}  lg:justify-center`}>
                 <div className="w-full lg:w-[1024px] flex justify-between px-6">
                     <div className="z-50 items-center justify-between hidden gap-4 md:flex">
                         {menuItems.map((item, index) => (
@@ -54,9 +54,9 @@ const Navbar = () => {
                         <Button
                             as={Link}
                             href="/"
-                            className="bg-black shadow-lg transition-transform- hover:shadow-primary/50 hover:-translate-y-1 hover:scale-105 border-2 border-primary/30"
-                            variant="bordered"
-                            radius="full"
+                            className="transition-transform- hover:shadow-primary/50 border-2 border-primary/30"
+                            color="primary"
+                            radius="lg"
                             size="md"
                         >
                             Contact Me <IoIosCall/>

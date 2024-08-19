@@ -21,20 +21,20 @@ interface SkillsProps {
 const Skills = ({ className }: SkillsProps) => {
   const skills = [
     {
-      title: 'Front-end Engineering',
+      title: 'Front-end ',
       description: 'I am experienced in building responsive and interactive web applications using modern web   technologies',
       icons: [<RiNextjsFill size={25} key="nextjs" />, <SiTypescript size={20} key="typescript" />, <RiTailwindCssFill size={28} key="tailwind" />, <RiVuejsFill size={25} key="vuejs" />, <SiVite size={25} key="vite" />, <FaHtml5 size={25} key="html5" />, <FaCss3Alt size={25} key="css3" />],
       logo: <FrontendIcon className='h-[150px] text-neutral-400 fill-neutral-400 translate-x-1' />
     },
     {
-      title: 'Back-end Engineering',
+      title: 'Back-end ',
       description: 'I\'ve built RESTful APIs and backends for various applications using various frameworks and languages',
       icons: [<FaPython size={28} key="python" />, <BiLogoPostgresql size={28} key="postgresql" />, <FaGolang size={30} key="golang" />, <FaJava size={28} key="java" />, <SiDjango size={25} key="django" />, <BiLogoSpringBoot size={28} key="springboot" />],
       logo: <BackendIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
     },
     {
-      title: 'Data Science',
-      description: 'I\'ve done machine learning classification, regression, and clustering, including NLP, and Knowledge Graph datasets',
+      title: 'Data ',
+      description: 'I\'ve done machine learning classification, regression, and clustering, including NLP, and Knowledge Graph datasets on campus',
       icons: [<FaPython size={26} key="python" />, <BiLogoPostgresql size={26} key="postgresql" />, <SiPandas size={26} key="pandas" />, <SiNumpy size={26} key="numpy" />, <LogosSeabornIcon className={`h-[26px] grayscale`} key="seaborn" />, <ScikitLearnLogo className={`h-[28px] grayscale`} key="scikit-learn" />],
       logo: <DataScienceIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
     }
@@ -53,7 +53,7 @@ const Skills = ({ className }: SkillsProps) => {
                   <CardHeader className='justify-center'>
                     <div className='flex flex-col items-center space-y-3'>
                       {skill.logo}
-                      <p className='text-xl'>{skill.title}</p>
+                      <p className='text-xl text-center text-primary-600 font-medium'>{skill.title} <span className='text-white font-normal'>Engineering</span></p>
                     </div>
                   </CardHeader>
                   <CardBody className='pt-0 items-center'>
