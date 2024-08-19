@@ -12,7 +12,7 @@ const Projects = ({ className }: { className: string }) => {
   const projects = [
     {
       name: 'fiardiel\'s Portfolio',
-      description: 'Self explanatory. Pretty much this website. Built with the famous Next.js and TailwindCSS and hosted on Vercel',
+      description: 'Self explanatory website. Inspired by the themes of Next.js and from other developers (my friend\'s) portfolio',
       img: 'portfolio.png',
       githubLink: 'fiardiel/portfolio/',
       projectLink: 'https://fiardiel-portfolio.vercel.app',
@@ -59,7 +59,7 @@ const Projects = ({ className }: { className: string }) => {
           {projects.map((project, index) => (
             <Reveal key={index} className='flex justify-center h-full'>
               <div className='w-full h-full'>
-                <Card radius='sm' className='w-full border-2 border-neutral-700/50 hover:bg-neutral-950 h-full'>
+                <Card radius='sm' className='w-full bg-transparent border-2 border-neutral-700/60 hover:border-neutral-700/70 hover:bg-neutral-950 h-full'>
                   <CardHeader className='flex flex-col items-start p-0'>
                     <div className='w-full aspect-w-16 aspect-h-9'>
                       <NextImage removeWrapper className='absolute object-cover w-full h-full rounded-sm rounded-b-none' src={project.img ? `/images/projects/${project.img}` : fallbackSrc} fallbackSrc={fallbackSrc} />
@@ -87,12 +87,12 @@ const Projects = ({ className }: { className: string }) => {
                   </CardBody>
                   <CardFooter className='justify-start items-center gap-3 p-5'>
                     <div>
-                      <Button radius='sm' isDisabled={project.isProjectDisabled} isIconOnly className='bg-neutral-700/60 group hover:bg-primary' as={Link} href={project.projectLink}>
+                      <Button variant='bordered'  radius='sm' isDisabled={project.isProjectDisabled} isIconOnly className='bg-transparent hover:border-none group hover:bg-primary' as={Link} href={project.projectLink}>
                         <MdArrowForwardIos className='group-hover:fill-current group-hover:text-white' size={18} />
                       </Button>
                     </div>
                     <div>
-                      <Button radius='sm' isDisabled={project.isGithubDisabled} isIconOnly className='bg-neutral-700/60 group hover:bg-primary' as={Link} href={`https://github.com/${project.githubLink}`}>
+                      <Button radius='sm' variant='bordered' isDisabled={project.isGithubDisabled} isIconOnly className='group hover:bg-primary hover:border-0' as={Link} href={`https://github.com/${project.githubLink}`}>
                         <FiGithub className='group-hover:fill-white' size={22} />
                       </Button>
                     </div>
