@@ -49,7 +49,7 @@ const Skills = ({ className }: SkillsProps) => {
           <div className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
             {skills.map((skill, index) => (
               <Reveal key={index}>
-                <Card radius='sm' className='w-full md:h-96 p-3 border-1 border-white/10 hover:border-white/20 hover:bg-neutral-950'>
+                <Card radius='sm' className='w-full md:h-96 p-3 border-2 border-white/10 hover:border-neutral/60 hover:bg-neutral-950 bg-transparent'>
                   <CardHeader className='justify-center'>
                     <div className='flex flex-col items-center space-y-3'>
                       {skill.logo}
