@@ -87,12 +87,12 @@ const Projects = ({ className }: { className: string }) => {
                   </CardBody>
                   <CardFooter className='justify-start items-center gap-3 p-5'>
                     <div>
-                      <Button isDisabled={project.isProjectDisabled} isIconOnly className='bg-neutral-700/60 group hover:bg-primary' as={Link} href={project.projectLink}>
+                      <Button radius='sm' isDisabled={project.isProjectDisabled} isIconOnly className='bg-neutral-700/60 group hover:bg-primary' as={Link} href={project.projectLink}>
                         <MdArrowForwardIos className='group-hover:fill-current group-hover:text-white' size={18} />
                       </Button>
                     </div>
                     <div>
-                      <Button isDisabled={project.isGithubDisabled} isIconOnly className='bg-neutral-700/60 group hover:bg-primary' as={Link} href={`https://github.com/${project.githubLink}`}>
+                      <Button radius='sm' isDisabled={project.isGithubDisabled} isIconOnly className='bg-neutral-700/60 group hover:bg-primary' as={Link} href={`https://github.com/${project.githubLink}`}>
                         <FiGithub className='group-hover:fill-white' size={22} />
                       </Button>
                     </div>
