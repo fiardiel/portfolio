@@ -33,7 +33,7 @@ const Projects = ({ className }: { className: string }) => {
     {
       name: 'FlexTime',
       description: 'A rework project, originally by github.com/rice-science. A gym session planning app built for thriving students that want to keep their body in shape',
-      img: '',
+      img: null,
       githubLink: 'fiardiel/flextime-fe/',
       projectLink: 'https://samakta-mitra.vercel.app/',
       toolIcons: ['nextJS', 'tailwind', 'typescript', 'python'],
@@ -41,6 +41,8 @@ const Projects = ({ className }: { className: string }) => {
       isGithubDisabled: false
     }, 
   ]
+  
+  const fallbackSrc = '/images/elementor-placeholder-image.webp'
 
   return (
     <div id="projects" className={`w-full ${className}`}>
@@ -54,10 +56,10 @@ const Projects = ({ className }: { className: string }) => {
           {projects.map((project, index) => (
             <Reveal key={index} className='flex justify-center h-full'>
               <div className='w-full h-full'>
-                <Card radius='sm' className='w-full border-2 border-neutral-700/50 hover:-translate-y-2 h-full'>
+                <Card radius='sm' className='w-full border-2 border-neutral-700/50 hover:bg-neutral-950 h-full'>
                   <CardHeader className='flex flex-col items-start p-0'>
                     <div className='w-full aspect-w-16 aspect-h-9'>
-                      <NextImage removeWrapper className='absolute object-cover w-full h-full rounded-sm rounded-b-none' src={`/images/projects/${project.img}`} />
+                      <NextImage removeWrapper className='absolute object-cover w-full h-full rounded-sm rounded-b-none' src={project.img ? `/images/projects/${project.img}` : fallbackSrc} fallbackSrc={fallbackSrc} />
                     </div>
                   </CardHeader>
                   <CardBody className='items-start p-5 pb-0'>
@@ -78,7 +80,7 @@ const Projects = ({ className }: { className: string }) => {
                   <CardFooter className='justify-between p-5'>
                     <div className=''>
                       {!project.isProjectDisabled ? (
-                        <Link href={project.projectLink} className='transition-colors duration-300 flex gap-2 underline-animation underline-animation-blue text-primary-600 hover:text-white'>
+                        <Link href={project.projectLink} className='transition-colors duration-300 flex gap-2 underline-animation underline-animation-blue text-primary hover:opacity-100 hover:text-white'>
                           View Project <MdArrowOutward size={20}/>
                         </Link>
                       ) :
@@ -87,9 +89,9 @@ const Projects = ({ className }: { className: string }) => {
                       )
                       }
                     </div>
-                    <div className=''>
-                      <Link isDisabled={project.isGithubDisabled} href={`https://github.com/${project.githubLink}`} className='transition grayscale hover:opacity-100 hover:grayscale-0'>
-                        <GithubIcon color='#ffffff' className='h-7' />
+                    <div className={project.isGithubDisabled ? 'hidden' : 'block'}>
+                      <Link hidden={project.isGithubDisabled} href={`https://github.com/${project.githubLink}`} className='transition grayscale hover:opacity-100 hover:grayscale-0'>
+                        <GithubIcon className='h-7' />
                       </Link>
                     </div>
                   </CardFooter>
