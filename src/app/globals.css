@@ -32,7 +32,7 @@ body {
 	}
 
 	.underline-animation::after {
-		@apply absolute content-[''] w-full h-0.5 left-0 bottom-[-1px] scale-x-0 hover:scale-x-100 origin-bottom-left hover:origin-bottom-left transition-transform duration-300;
+		@apply absolute content-[''] w-full h-[3px] left-0 bottom-[-1px] scale-x-0 hover:scale-x-100 origin-bottom-left hover:origin-bottom-left transition-transform duration-300 bg-primary;
 	}
 
   .underline-animation-red::after {

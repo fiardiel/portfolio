@@ -39,7 +39,7 @@ const SmallNavbar = () => {
 
     return (
         <div className='p-2 px-5 md:hidden sticky top-0 z-50'>
-            <div className={`transition duration-500 bg-transparent p-3 ${!isScrolled ? 'bg-transparent border-transparent' : 'border border-white/5 shadow-xl bg-neutral-800/55 backdrop-blur-lg rounded-full'}`}>
+            <div className={`transition duration-500 bg-transparent p-3 ${!isScrolled ? 'bg-transparent border-transparent' : 'border border-white/5 shadow-xl bg-neutral-800/60 backdrop-blur-md rounded-full'}`}>
                 <div className="flex justify-between">
                     <div className="flex justify-start items-center gap-2">
                         {menuItems.map((item, index) => (

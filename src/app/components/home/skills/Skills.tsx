@@ -44,7 +44,7 @@ const Skills = ({ className }: SkillsProps) => {
     <div id="skills">
       <div className={`flex flex-col w-full items-center md:items-start ${className}`}>
         <Reveal className='text-center md:text-start'>
-          <p className='text-3xl font-medium decoration-primary underline underline-offset-8'>Skills & Services</p>
+          <p className='text-3xl font-medium decoration-4 decoration-primary underline underline-offset-8'>Skills & Services</p>
         </Reveal>
           <div className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
             {skills.map((skill, index) => (

@@ -1,12 +1,13 @@
 'use client'
 
-import { Card, CardBody, CardFooter, CardHeader, Link } from '@nextui-org/react'
+import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Link } from '@nextui-org/react'
 import React from 'react'
 import { Image as NextImage } from '@nextui-org/react'
-import GithubIcon from '@/components/icons/GithubIcon'
-import { MdArrowOutward } from 'react-icons/md'
 import Reveal from '@/components/utils/Reveal'
 import { mapIcon } from '@/components/utils/IconMapper'
+import { FiGithub } from 'react-icons/fi'
+import { FaArrowRight } from 'react-icons/fa'
+import { MdArrowForwardIos } from 'react-icons/md'
 
 const Projects = ({ className }: { className: string }) => {
   const projects = [
@@ -16,39 +17,42 @@ const Projects = ({ className }: { className: string }) => {
       img: 'portfolio.png',
       githubLink: 'fiardiel/portfolio/',
       projectLink: 'https://fiardiel-portfolio.vercel.app',
+      projectType: 'Front-end',
       toolIcons: ['nextJS', 'tailwind', 'typescript'],
       isProjectDisabled: false,
       isGithubDisabled: false
-    }, 
+    },
     {
       name: 'PT. Samakta Mitra Company Profile',
       description: 'Created the front-end and back-end of the article page of Samakta Mitra\'s company profile web page',
       img: 'sam-web.png',
       projectLink: 'https://samakta-mitra.vercel.app/',
+      projectType: 'Full-stack',
       githubLink: 'fiardiel/sam-web/',
       toolIcons: ['vue', 'vite', 'tailwind', 'typescript', 'python', 'directus'],
       isProjectDisabled: true,
       isGithubDisabled: true
-    }, 
+    },
     {
       name: 'FlexTime',
       description: 'A rework project, originally by github.com/rice-science. A gym session planning app built for thriving students that want to keep their body in shape',
       img: null,
       githubLink: 'fiardiel/flextime-fe/',
+      projectType: 'Full-stack',
       projectLink: 'https://samakta-mitra.vercel.app/',
       toolIcons: ['nextJS', 'tailwind', 'typescript', 'python'],
       isProjectDisabled: true,
       isGithubDisabled: false
-    }, 
+    },
   ]
-  
+
   const fallbackSrc = '/images/elementor-placeholder-image.webp'
 
   return (
     <div id="projects" className={`w-full ${className}`}>
       <div className='flex flex-col items-center md:items-start w-full'>
         <Reveal className='text-center md:text-start'>
-          <p className='text-3xl font-medium underline underline-offset-8 decoration-blue-500'>
+          <p className='text-3xl font-medium decoration-4 underline underline-offset-8 decoration-blue-500'>
             Projects
           </p>
         </Reveal>
@@ -70,29 +74,28 @@ const Projects = ({ className }: { className: string }) => {
                         </div>
                       ))}
                     </div>
-                    <p className='text-white text-xl font-medium leading-7 line-clamp-2 mt-5'>
-                      {project.name}
-                    </p>
+                    <div className='flex w-full mt-5 gap-3 justify-start'>
+                      <p className='flex gap-2 w-auto text-white transition duration-300 text-xl font-medium leading-7 line-clamp-2'>
+                        {project.name}
+                      </p>
+                      <Chip radius='sm' variant='bordered' className='mb-0.5 self-end' size='sm' color='primary'>
+                        {project.projectType}
+                      </Chip>
+                    </div>
                     <p className='mt-2 line-clamp-5 text-neutral-400'>
                       {project.description}
                     </p>
                   </CardBody>
-                  <CardFooter className='justify-between p-5'>
-                    <div className=''>
-                      {!project.isProjectDisabled ? (
-                        <Link href={project.projectLink} className='transition-colors duration-300 flex gap-2 underline-animation underline-animation-blue text-primary hover:opacity-100 hover:text-white'>
-                          View Project <MdArrowOutward size={20}/>
-                        </Link>
-                      ) :
-                      (
-                        <p className='text-yellow-200 opacity-70'>Ongoing</p>
-                      )
-                      }
+                  <CardFooter className='justify-start items-center gap-3 p-5'>
+                    <div>
+                      <Button isDisabled={project.isProjectDisabled} isIconOnly className='bg-neutral-700/60 group hover:bg-primary' as={Link} href={project.projectLink}>
+                        <MdArrowForwardIos className='group-hover:fill-current group-hover:text-white' size={18} />
+                      </Button>
                     </div>
-                    <div className={project.isGithubDisabled ? 'hidden' : 'block'}>
-                      <Link hidden={project.isGithubDisabled} href={`https://github.com/${project.githubLink}`} className='transition grayscale hover:opacity-100 hover:grayscale-0'>
-                        <GithubIcon className='h-7' />
-                      </Link>
+                    <div>
+                      <Button isDisabled={project.isGithubDisabled} isIconOnly className='bg-neutral-700/60 group hover:bg-primary' as={Link} href={`https://github.com/${project.githubLink}`}>
+                        <FiGithub className='group-hover:fill-white' size={22} />
+                      </Button>
                     </div>
                   </CardFooter>
                 </Card>

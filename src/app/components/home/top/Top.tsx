@@ -35,9 +35,9 @@ const Top = () => {
               Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="text-lg transition-colors duration-300 hover:opacity-100 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red text-primary hover:text-white"> PT. Samakta Mitra</Link>
             </p>
 
-            <div className='flex justify-center md:justify-start gap-4'>
+            <div className='flex justify-center md:justify-start gap-3'>
               {socialLinks.map((item, index) => (
-                <Link key={index} href={item.href} className='transition grayscale hover:opacity-100 hover:grayscale-0'>
+                <Link key={index} href={item.href} className='transition hover:opacity-100 hover:-translate-y-1 underline-animation underline-animation-white hover:scale-105 pb-2'>
                   <div className='h-[30px] w-[30px]'>
                     {item.icon}
                   </div>
@@ -47,8 +47,8 @@ const Top = () => {
             <div>
               <Button
                 as={Link}
-                href="/projects"
-                className="shadow-lg shadow-primary mt-6"
+                href="#projects"
+                className="shadow-lg shadow-primary mt-4 hover:scale-105 hover:-translate-y-1 "
                 variant="bordered"
                 radius="full"
                 size="lg"
