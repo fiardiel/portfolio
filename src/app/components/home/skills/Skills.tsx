@@ -17,7 +17,7 @@ const Skills = ({ className }: SkillsProps) => {
     {
       title: 'Front-end ',
       description: 'I am experienced in building responsive and interactive web applications using modern web   technologies',
-      icons: ['nextJS', 'tailwind', 'typescript', 'vue', 'vite', 'html5', 'css3'],
+      icons: ['nextJS', 'react', 'tailwind', 'typescript', 'vue', 'vite'],
       logo: <FrontendIcon className='h-[150px] text-neutral-400 fill-neutral-400 translate-x-1' />
     },
     {

@@ -15,6 +15,7 @@ import { ScikitLearnLogo } from '@/components/icons/ScikitLearnLogo';
 import { LogosSeabornIcon } from '../icons/SeabornIcon';
 import NumpyIcon from '@/components/icons/NumpyIcon.svg';
 import PandasIcon from '@/components/icons/PandasIcon.svg';
+import ReactIcon from '@/components/icons/ReactIcon.svg';
 
 type IconMap = {
   [key: string]: IconType;
@@ -37,6 +38,7 @@ const iconMap: IconMap = {
   seaborn: LogosSeabornIcon,
   numpy: NumpyIcon,
   pandas: PandasIcon,
+  react: ReactIcon,
 };
 
 export const mapIcon = (iconName: string, className?: string) => {
