@@ -68,18 +68,20 @@ const Projects = ({ className }: { className: string }) => {
                   <CardBody className='items-start p-5 pb-0'>
                     <div className='flex flex-row gap-2 h-[22px]'>
                       {project.toolIcons.map((icon) => (
-                        <div key={icon} className='h-[22px] w-[22px] text-neutral-400'>
+                        <div key={icon} className='h-[25px] w-[25px] text-white'>
                           {mapIcon(icon, 'w-full h-full')}
                         </div>
                       ))}
                     </div>
                     <div className='flex w-full mt-5 gap-3 justify-start'>
-                      <p className='flex gap-2 w-auto text-white transition duration-300 text-xl font-medium leading-7 line-clamp-2'>
-                        {project.name}
+                      <p className='text-white transition duration-300 text-xl font-medium leading-7 line-clamp-2 gap-2'>
+                        <span className='mr-2'>
+                          {project.name}
+                        </span>
+                        <span className='text-primary text-xs inline-flex font-normal border-1 border-primary p-1 px-2 rounded-full'>
+                          {project.projectType}
+                        </span>
                       </p>
-                      <Chip radius='sm' variant='bordered' className='mb-0.5 self-end' size='sm' color='primary'>
-                        {project.projectType}
-                      </Chip>
                     </div>
                     <p className='mt-2 line-clamp-5 text-neutral-400'>
                       {project.description}
@@ -87,7 +89,7 @@ const Projects = ({ className }: { className: string }) => {
                   </CardBody>
                   <CardFooter className='justify-start items-center gap-3 p-5'>
                     <div>
-                      <Button variant='bordered'  radius='sm' isDisabled={project.isProjectDisabled} isIconOnly className='bg-transparent hover:border-none group hover:bg-primary' as={Link} href={project.projectLink}>
+                      <Button variant='bordered' radius='sm' isDisabled={project.isProjectDisabled} isIconOnly className='bg-transparent hover:border-none group hover:bg-primary' as={Link} href={project.projectLink}>
                         <MdArrowForwardIos className='group-hover:fill-current group-hover:text-white' size={18} />
                       </Button>
                     </div>

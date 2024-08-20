@@ -1,7 +1,11 @@
 import { IconType } from 'react-icons';
-import { FaPython } from 'react-icons/fa';
-import { RiNextjsFill, RiTailwindCssFill, RiVuejsFill } from 'react-icons/ri';
-import { SiDirectus, SiTypescript, SiVite } from 'react-icons/si';
+import { RiNextjsFill } from 'react-icons/ri';
+import TypescriptIcon from '@/components/icons/TypescriptIcon';
+import TailwindIcon from '@/components/icons/TailwindIcon';
+import PythonIcon from '@/components/icons/PythonIcon';
+import { VueIcon } from '@/components/icons/VueIcon';
+import { ViteIcon } from '@/components/icons/ViteIcon';
+import DirectusIcon from '@/components/icons/DirectusIcon';
 
 type IconMap = {
   [key: string]: IconType;
@@ -9,12 +13,12 @@ type IconMap = {
 
 const iconMap: IconMap = {
   nextJS: RiNextjsFill,
-  tailwind: RiTailwindCssFill,
-  typescript: SiTypescript,
-  vue: RiVuejsFill,
-  vite: SiVite,
-  directus: SiDirectus,
-  python: FaPython,
+  tailwind: TailwindIcon,
+  typescript: TypescriptIcon,
+  vue: VueIcon,
+  vite: ViteIcon,
+  directus: DirectusIcon,
+  python: PythonIcon,
 };
 
 export const mapIcon = (iconName: string, className?: string) => {

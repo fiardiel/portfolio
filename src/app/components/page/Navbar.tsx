@@ -56,7 +56,7 @@ const Navbar = () => {
                             href="/"
                             className="transition-transform- hover:shadow-primary/50 border-2 border-primary/30"
                             color="primary"
-                            radius="lg"
+                            radius="sm"
                             size="md"
                         >
                             Contact Me <IoIosCall/>
