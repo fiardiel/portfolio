@@ -12,7 +12,7 @@ import SpotifyIcon from '@/components/icons/SpotifyIcon'
 import LinkedinIcon from '@/components/icons/LinkedinIcon'
 import GithubIcon from '@/components/icons/GithubIcon'
 
-const Top = () => {
+const Top = ({className}: {className: string | undefined}) => {
   const socialLinks = [
     { name: "Github", icon: <GithubIcon  />, href: "https://github.com/fiardiel" },
     { name: "LinkedIn", icon: <LinkedinIcon /> , href: "https://www.linkedin.com/in/rafiardiel" },
@@ -21,7 +21,7 @@ const Top = () => {
     
   ]
   return (
-    <div id='top'>
+    <div id='top' className={className}>
       <Reveal>
         <div className="md:grid md:grid-cols-[auto,1fr] md:auto-cols-min md:gap-6 lg:gap-12 flex flex-col-reverse items-center">
           <div className="flex flex-col items-center w-full md:items-start md:w-full">

@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth dark">
       <body className={`${inter.className} font-sans dark bg-black text-foreground`}>
-        <Navbar />
-        <SmallNavbar />
         <Providers>
+          <Navbar />
           {children}
+          <SmallNavbar />
         </Providers>
       </body>
     </html>
