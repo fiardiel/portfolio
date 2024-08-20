@@ -2,17 +2,13 @@
 
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
-import { RiNextjsFill, RiTailwindCssFill, RiVuejsFill } from 'react-icons/ri';
-import { SiDjango, SiNumpy, SiPandas, SiTypescript, SiVite } from 'react-icons/si';
-import { FaCss3Alt, FaHtml5, FaJava, FaPython } from 'react-icons/fa';
-import { BiLogoPostgresql, BiLogoSpringBoot } from 'react-icons/bi';
-import { FaGolang } from 'react-icons/fa6';
 import Reveal from '@/components/utils/Reveal';
 import { FrontendIcon } from '@/components/icons/FrontendIcon';
 import { LogosSeabornIcon } from '@/components/icons/SeabornIcon';
 import { ScikitLearnLogo } from '@/components/icons/ScikitLearnLogo';
 import BackendIcon from '@/components/icons/BackendIcon';
 import DataScienceIcon from '@/components/icons/DataScienceIcon';
+import { mapIcon } from '@/components/utils/IconMapper';
 
 interface SkillsProps {
   className?: string;
@@ -23,19 +19,19 @@ const Skills = ({ className }: SkillsProps) => {
     {
       title: 'Front-end ',
       description: 'I am experienced in building responsive and interactive web applications using modern web   technologies',
-      icons: [<RiNextjsFill size={25} key="nextjs" />, <SiTypescript size={20} key="typescript" />, <RiTailwindCssFill size={28} key="tailwind" />, <RiVuejsFill size={25} key="vuejs" />, <SiVite size={25} key="vite" />, <FaHtml5 size={25} key="html5" />, <FaCss3Alt size={25} key="css3" />],
+      icons: ['nextJS', 'tailwind', 'typescript', 'vue', 'vite', 'html5', 'css3'],
       logo: <FrontendIcon className='h-[150px] text-neutral-400 fill-neutral-400 translate-x-1' />
     },
     {
       title: 'Back-end ',
       description: 'I\'ve built RESTful APIs and backends for various applications using various frameworks and languages',
-      icons: [<FaPython size={28} key="python" />, <BiLogoPostgresql size={28} key="postgresql" />, <FaGolang size={30} key="golang" />, <FaJava size={28} key="java" />, <SiDjango size={25} key="django" />, <BiLogoSpringBoot size={28} key="springboot" />],
+      icons: ['python', 'postgresql', 'golang', 'java', 'springboot', 'django'],
       logo: <BackendIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
     },
     {
       title: 'Data ',
       description: 'I\'ve done machine learning classification, regression, and clustering, including NLP, and Knowledge Graph datasets on campus',
-      icons: [<FaPython size={26} key="python" />, <BiLogoPostgresql size={26} key="postgresql" />, <SiPandas size={26} key="pandas" />, <SiNumpy size={26} key="numpy" />, <LogosSeabornIcon className={`h-[26px] grayscale`} key="seaborn" />, <ScikitLearnLogo className={`h-[28px] grayscale`} key="scikit-learn" />],
+      icons: ['python', 'postgresql', 'pandas', 'numpy', 'seaborn', 'scikitlearn'],
       logo: <DataScienceIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
     }
   ]
@@ -46,33 +42,38 @@ const Skills = ({ className }: SkillsProps) => {
         <Reveal className='text-center md:text-start'>
           <p className='text-3xl font-medium decoration-4 decoration-primary underline underline-offset-8'>Skills & Services</p>
         </Reveal>
-          <div className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
-            {skills.map((skill, index) => (
-              <Reveal key={index}>
-                <Card radius='sm' className='w-full md:h-96 p-3 border-1 border-neutral-700/60 hover:border-neutral-700/70 bg-neutral-950 hover:bg-black'>
-                  <CardHeader className='justify-center'>
-                    <div className='flex flex-col items-center space-y-3'>
-                      {skill.logo}
-                      <p className='text-xl text-center text-primary-600 font-medium'>{skill.title} <span className='text-white font-normal'>Engineering</span></p>
-                    </div>
-                  </CardHeader>
-                  <CardBody className='pt-0 items-center'>
-                    <div className='flex flex-col items-center'>
-                      <p className='text-sm text-neutral-400 text-center'>
-                        {skill.description}
-                      </p>
-                    </div>
-                  </CardBody>
-                  <CardFooter className='text-neutral-400 justify-center gap-3 flex-wrap md:flex-nowrap'>
-                    {skill.icons.map((icon, index) => (
-                      <div key={index}>{icon}</div>
-                    ))}
-                  </CardFooter>
-                </Card>
-              </Reveal>
-            ))}
-          </div>
+        <div className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
+          {skills.map((skill, index) => (
+            <Reveal key={index}>
+              <Card radius='sm' className='w-full md:h-96 p-3 border-1 border-neutral-700/60 hover:border-neutral-700/70 bg-neutral-950 hover:bg-black'>
+                <CardHeader className='justify-center'>
+                  <div className='flex flex-col items-center space-y-3'>
+                    {skill.logo}
+                    <p className='text-xl text-center text-primary-600 font-medium'>{skill.title} <span className='text-white font-normal'>Engineering</span></p>
+                  </div>
+                </CardHeader>
+                <CardBody className='pt-0 items-center'>
+                  <div className='flex flex-col items-center'>
+                    <p className='text-sm text-neutral-400 text-center'>
+                      {skill.description}
+                    </p>
+                  </div>
+                </CardBody>
+                <CardFooter className='text-neutral-400 justify-center gap-3 flex-wrap md:flex-nowrap'>
+                  {skill.icons.map((icon, index) => {
+                    const elem = mapIcon(icon, 'w-full h-full')
+                    return elem ? (
+                      <div key={index} className='h-[30px] w-[30px] text-white'>
+                        {elem}
+                      </div>
+                    ) : null
+                  })}
+                </CardFooter>
+              </Card>
+            </Reveal>
+          ))}
         </div>
+      </div>
     </div>
   )
 }

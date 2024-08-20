@@ -45,7 +45,7 @@ const Projects = ({ className }: { className: string }) => {
     },
   ]
 
-  const fallbackSrc = '/images/elementor-placeholder-image.webp'
+  const fallbackSrc = '/images/fallback.webp'
 
   return (
     <div id="projects" className={`w-full ${className}`}>
@@ -74,7 +74,7 @@ const Projects = ({ className }: { className: string }) => {
                       ))}
                     </div>
                     <div className='flex w-full mt-5 gap-3 justify-start'>
-                      <p className='text-white transition duration-300 text-xl font-medium leading-7 line-clamp-2 gap-2'>
+                      <p className='text-white transition duration-300 text-xl font-medium leading-7 gap-2'>
                         <span className='mr-2'>
                           {project.name}
                         </span>
