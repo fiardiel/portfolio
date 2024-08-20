@@ -4,8 +4,6 @@ import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import Reveal from '@/components/utils/Reveal';
 import { FrontendIcon } from '@/components/icons/FrontendIcon';
-import { LogosSeabornIcon } from '@/components/icons/SeabornIcon';
-import { ScikitLearnLogo } from '@/components/icons/ScikitLearnLogo';
 import BackendIcon from '@/components/icons/BackendIcon';
 import DataScienceIcon from '@/components/icons/DataScienceIcon';
 import { mapIcon } from '@/components/utils/IconMapper';
@@ -49,7 +47,7 @@ const Skills = ({ className }: SkillsProps) => {
                 <CardHeader className='justify-center'>
                   <div className='flex flex-col items-center space-y-3'>
                     {skill.logo}
-                    <p className='text-xl text-center text-primary-600 font-medium'>{skill.title} <span className='text-white font-normal'>Engineering</span></p>
+                    <p className='text-xl text-center text-primary-600 group-hover:text-primary font-medium transition duration-200'>{skill.title} <span className='text-white font-normal'>Engineering</span></p>
                   </div>
                 </CardHeader>
                 <CardBody className='pt-0 items-center'>
