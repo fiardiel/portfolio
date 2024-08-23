@@ -26,7 +26,6 @@ const Navbar = () => {
         { name: "Projects", path: "projects" },
     ]
 
-
     return (
         <div className={`w-full flex justify-center sticky top-0 z-50 pt-0 lg:pt-3`}>
             <nav className={`rounded-lg md:rounded-none lg:rounded-lg flex border-1 w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-900/60 backdrop-blur-md'}  lg:justify-center`}>
@@ -40,7 +39,7 @@ const Navbar = () => {
                         {menuItems.map((item, index) =>
                         (
                             <div key={index} className="w-min h-min">
-                                <Button disableRipple onPress={item.name === 'Home' ? scrollToTop : () => scrollToElementById(item.path)} className="text-lg p-0 bg-transparent underline-animation underline-animation-blue min-w-0 min-h-0 rounded-none">
+                                <Button disableRipple onPress={item.name === 'Home' ? scrollToTop : () => scrollToElementById(item.path)} className={`text-lg p-0 bg-transparent min-w-0 min-h-0 rounded-none underline-animation underline-animation-blue`}>
                                     <span>{item.name}</span>
                                 </Button>
                             </div>
