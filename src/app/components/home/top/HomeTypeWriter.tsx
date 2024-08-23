@@ -10,12 +10,11 @@ interface HomeTypeWriterProps {
 
 const HomeTypeWriter: React.FC<HomeTypeWriterProps> = ({className}) => {
     return (
-        <div className={`text-[44px]  md:text-[32px] md:px-0 leading-[40px] lg:text-5xl md:text-start text-center ${className}`}>
+        <div className={`text-4xl text-start ${className}`}>
             <TypeIt options={{
                 strings: [
-                    "I'm Rafi Ardiel Erinaldi 👋",
-                    "I'm a Full-stack Developer",
-                    "I'm a CS Student @UI 🎓"
+                    "Full-stack Developer",
+                    "CS Student @UI"
                 ],
                 loop: true,
                 speed: 40,

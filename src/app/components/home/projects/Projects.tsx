@@ -54,12 +54,12 @@ const Projects = ({className}: ProjectsProps) => {
   return (
     <section id="projects">
       <div className={'flex flex-col items-center md:items-start w-full ' + className}>
-        <Reveal className='text-center md:text-start'>
-          <p className='text-3xl font-medium decoration-4 underline underline-offset-8 decoration-blue-500'>
+        <Reveal className='text-start'>
+          <p className='text-4xl font-semibold decoration-4 underline underline-offset-8 decoration-blue-500'>
             Projects
           </p>
         </Reveal>
-        <div className='flex flex-col items-center mt-5 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 w-full'>
+        <div className='flex flex-col items-center mt-10 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 w-full'>
           {projects.map((project, index) => (
             <Reveal key={index} className='flex justify-center h-full'>
               <div className='w-full h-full'>

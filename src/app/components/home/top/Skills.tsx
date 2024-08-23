@@ -35,11 +35,8 @@ const Skills = ({ className }: SkillsProps) => {
   ]
 
   return (
-    <section id="skills">
+    <div>
       <div className={`flex flex-col w-full items-center md:items-start ${className}`}>
-        <Reveal className='text-center md:text-start'>
-          <p className='text-3xl font-medium decoration-4 decoration-primary underline underline-offset-8'>Skills & Services</p>
-        </Reveal>
         <div className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
           {skills.map((skill, index) => (
             <Reveal key={index} className='h-full'>
@@ -72,7 +69,7 @@ const Skills = ({ className }: SkillsProps) => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
