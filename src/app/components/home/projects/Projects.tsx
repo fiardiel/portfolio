@@ -8,7 +8,11 @@ import { mapIcon } from '@/components/utils/IconMapper'
 import { FiGithub } from 'react-icons/fi'
 import { MdArrowForwardIos } from 'react-icons/md'
 
-const Projects = ({ className }: { className: string }) => {
+interface ProjectsProps {
+  className?: string;
+}
+
+const Projects = ({className}: ProjectsProps) => {
   const projects = [
     {
       name: 'fiardiel\'s Portfolio',
@@ -48,8 +52,8 @@ const Projects = ({ className }: { className: string }) => {
   const fallbackSrc = '/images/fallback.webp'
 
   return (
-    <div id="projects" className={`w-full ${className}`}>
-      <div className='flex flex-col items-center md:items-start w-full'>
+    <div id="projects">
+      <div className={'flex flex-col items-center md:items-start w-full ' + className}>
         <Reveal className='text-center md:text-start'>
           <p className='text-3xl font-medium decoration-4 underline underline-offset-8 decoration-blue-500'>
             Projects

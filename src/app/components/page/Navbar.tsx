@@ -1,21 +1,12 @@
 'use client'
 
+import { scrollToElementById, scrollToTop } from "@/utils";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoIosCall } from "react-icons/io";
 
 const Navbar = () => {
-    const pathname = usePathname();
-
-    const isActive = (path: string) => {
-        if (path !== '/') {
-            return pathname.startsWith(path);
-        }
-        return pathname === path;
-    };
-
     const [isScrolled, setIsScrolled] = useState(false);
 
     const handleScroll = () => {
@@ -30,25 +21,31 @@ const Navbar = () => {
     }, [])
 
     const menuItems = [
-        { name: "Home", path: "#top" },
-        { name: "Skills", path: "#skills" },
-        { name: "Projects", path: "#projects" },
-        // { name: "Profile", path: "/profile" },
-        // { name: "Experiences", path: "/experiences" },
-        // { name: "Contact", path: "/contact" },
+        { name: "Home", path: "top" },
+        { name: "Skills", path: "skills" },
+        { name: "Projects", path: "projects" },
     ]
 
 
     return (
-        <div className={`w-auto flex justify-center sticky md:top-0 z-50 lg:pt-5`}>
-            <nav className={`lg:rounded-lg hidden md:flex lg:inline-flex border-1 md:w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-900/60 backdrop-blur-md'}  lg:justify-center`}>
-                <div className="w-full lg:w-[1024px] flex justify-between px-6">
-                    <div className="z-50 items-center justify-between hidden gap-4 md:flex">
-                        {menuItems.map((item, index) => (
-                            <Link key={index} href={item.path}>
-                                <p className={`${isActive(item.path) ? 'text-primary font-semibold' : 'text-white underline-animation underline-animation-blue'}`}>{item.name}</p>
-                            </Link>
-                        ))}
+        <div className={`w-full flex justify-center sticky top-0 z-50 pt-0 lg:pt-3`}>
+            <nav className={`rounded-lg md:rounded-none lg:rounded-lg flex border-1 w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-900/60 backdrop-blur-md'}  lg:justify-center`}>
+                <div className="w-full lg:w-[1024px] flex justify-between items-center px-6">
+                    <div className="w-full md:w-auto">
+                        <Button onPress={scrollToTop} disableRipple className="text-2xl p-0 bg-transparent gap-1">
+                            <span className="text-primary font-bold">@</span> <span className="font-semibold">fiardiel</span>
+                        </Button>
+                    </div>
+                    <div className="z-50 items-center justify-between hidden gap-6 md:flex">
+                        {menuItems.map((item, index) =>
+                        (
+                            <div key={index} className="w-min h-min">
+                                <Button disableRipple onPress={item.name === 'Home' ? scrollToTop : () => scrollToElementById(item.path)} className="text-lg p-0 bg-transparent underline-animation underline-animation-blue min-w-0 min-h-0 rounded-none">
+                                    <span>{item.name}</span>
+                                </Button>
+                            </div>
+                        )
+                        )}
                     </div>
                     <div className="z-50 logo">
                         <Button
@@ -59,7 +56,7 @@ const Navbar = () => {
                             radius="sm"
                             size="md"
                         >
-                            Contact Me <IoIosCall/>
+                            Contact Me <IoIosCall size={20} />
                         </Button>
                     </div>
                 </div>
