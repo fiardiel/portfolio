@@ -22,7 +22,6 @@ const Summary = ({ className }: AboutProps) => {
     { name: "LinkedIn", icon: <LinkedinIcon /> , href: "https://www.linkedin.com/in/rafiardiel" },
     { name: "Instagram", icon: <InstagramIcon />, href: "https://www.instagram.com/fiardiel" },
     { name: "Spotify", icon: <SpotifyIcon />, href: "https://open.spotify.com/user/gv0uezdxkd6lpfd65kp8cy4ca?si=4e2f3d6a7ad649b4"},
-    
   ]
   return (
     <div className={className}>
@@ -31,7 +30,7 @@ const Summary = ({ className }: AboutProps) => {
           <div className="flex flex-col w-full items-start">
             <div>
               <h1 className={`text-5xl`}>Hello<span className="text-blue-600">, World!</span></h1>
-              <h1 className='text-5xl'><span>I'm </span> <span className='font-semibold'>Rafi Ardiel Erinaldi</span></h1>
+              <h1 className='text-5xl'><span>I&apos;m </span> <span className='font-semibold'>Rafi Ardiel Erinaldi</span></h1>
               <HomeTypeWriter className="text-4xl text-start mt-2 text-gray-400/90" />
               <p className="mb-4 mt-3 font-light text-gray-400 text-lg text-start">
                 A Full-stack Engineer specializing in Next.js and
