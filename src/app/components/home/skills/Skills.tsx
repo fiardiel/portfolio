@@ -35,7 +35,7 @@ const Skills = ({ className }: SkillsProps) => {
   ]
 
   return (
-    <div id="skills">
+    <section id="skills">
       <div className={`flex flex-col w-full items-center md:items-start ${className}`}>
         <Reveal className='text-center md:text-start'>
           <p className='text-3xl font-medium decoration-4 decoration-primary underline underline-offset-8'>Skills & Services</p>
@@ -72,7 +72,7 @@ const Skills = ({ className }: SkillsProps) => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

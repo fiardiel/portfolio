@@ -52,7 +52,7 @@ const Projects = ({className}: ProjectsProps) => {
   const fallbackSrc = '/images/fallback.webp'
 
   return (
-    <div id="projects">
+    <section id="projects">
       <div className={'flex flex-col items-center md:items-start w-full ' + className}>
         <Reveal className='text-center md:text-start'>
           <p className='text-3xl font-medium decoration-4 underline underline-offset-8 decoration-blue-500'>
@@ -109,7 +109,7 @@ const Projects = ({className}: ProjectsProps) => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 
 }
