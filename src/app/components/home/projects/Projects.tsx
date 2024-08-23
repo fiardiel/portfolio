@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Link } from '@nextui-org/react'
+import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Link, Tooltip } from '@nextui-org/react'
 import React from 'react'
 import { Image as NextImage } from '@nextui-org/react'
 import Reveal from '@/components/utils/Reveal'
@@ -21,7 +21,11 @@ const Projects = ({className}: ProjectsProps) => {
       githubLink: 'fiardiel/portfolio/',
       projectLink: 'https://fiardiel-portfolio.vercel.app',
       projectType: 'Front-end',
-      toolIcons: ['nextJS', 'tailwind', 'typescript'],
+      tools: [
+        { name: 'nextJS', title: 'Next.js' },
+        { name: 'tailwind', title: 'Tailwind CSS' },
+        { name: 'typescript', title: 'TypeScript' }
+      ],
       isProjectDisabled: false,
       isGithubDisabled: false
     },
@@ -32,7 +36,14 @@ const Projects = ({className}: ProjectsProps) => {
       projectLink: 'https://samakta-mitra.vercel.app/',
       projectType: 'Full-stack',
       githubLink: 'fiardiel/sam-web/',
-      toolIcons: ['vue', 'vite', 'tailwind', 'typescript', 'python', 'directus'],
+      tools: [
+        { name: 'vue', title: 'Vue' },
+        { name: 'vite', title: 'Vite' },
+        { name: 'tailwind', title: 'Tailwind CSS' },
+        { name: 'typescript', title: 'TypeScript' },
+        { name: 'python', title: 'Python' },
+        { name: 'directus', title: 'Directus' }
+      ],
       isProjectDisabled: true,
       isGithubDisabled: true
     },
@@ -43,7 +54,12 @@ const Projects = ({className}: ProjectsProps) => {
       githubLink: 'fiardiel/flextime-fe/',
       projectType: 'Full-stack',
       projectLink: 'https://samakta-mitra.vercel.app/',
-      toolIcons: ['nextJS', 'tailwind', 'typescript', 'python'],
+      tools: [
+        { name: 'nextJS', title: 'Next.js' },
+        { name: 'tailwind', title: 'Tailwind CSS' },
+        { name: 'typescript', title: 'TypeScript' },
+        { name: 'python', title: 'Python' }
+      ],
       isProjectDisabled: true,
       isGithubDisabled: false
     },
@@ -71,10 +87,12 @@ const Projects = ({className}: ProjectsProps) => {
                   </CardHeader>
                   <CardBody className='items-start p-5 pb-0'>
                     <div className='flex flex-row gap-2 h-[22px]'>
-                      {project.toolIcons.map((icon) => (
-                        <div key={icon} className='h-[25px] w-[25px] text-white'>
-                          {mapIcon(icon, 'w-full h-full')}
-                        </div>
+                      {project.tools.map((tool, index) => (
+                        <Tooltip key={index} content={tool.title}>
+                          <div className='h-[25px] w-[25px] text-white'>
+                            {mapIcon(tool.name, 'w-full h-full')}
+                          </div>
+                        </Tooltip>
                       ))}
                     </div>
                     <div className='flex w-full mt-5 gap-3 justify-start'>

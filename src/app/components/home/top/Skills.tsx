@@ -7,6 +7,7 @@ import { FrontendIcon } from '@/components/icons/FrontendIcon';
 import BackendIcon from '@/components/icons/BackendIcon';
 import DataScienceIcon from '@/components/icons/DataScienceIcon';
 import { mapIcon } from '@/components/utils/IconMapper';
+import { Tooltip } from '@nextui-org/react';
 
 interface SkillsProps {
   className?: string;
@@ -17,20 +18,42 @@ const Skills = ({ className }: SkillsProps) => {
     {
       title: 'Front-end ',
       description: 'I am experienced in building responsive and interactive web applications using modern web   technologies',
-      icons: ['nextJS', 'react', 'tailwind', 'typescript', 'vue', 'vite'],
+      techs: [
+        { 'name': 'nextJS', 'title': 'Next.js' },
+        { 'name': 'react', 'title': 'React' },
+        { 'name': 'tailwind', 'title': 'Tailwind CSS' },
+        { 'name': 'typescript', 'title': 'TypeScript' },
+        { 'name': 'vue', 'title': 'Vue' },
+        { 'name': 'vite', 'title': 'Vite' }
+      ],
       logo: <FrontendIcon className='h-[150px] text-neutral-400 fill-neutral-400 translate-x-1' />
     },
     {
       title: 'Back-end ',
       description: 'I\'ve built RESTful APIs and backends for various applications using various frameworks and languages',
-      icons: ['python', 'postgresql', 'golang', 'java', 'springboot', 'django'],
+      techs: [
+        { 'name': 'python', 'title': 'Python' },
+        { 'name': 'postgresql', 'title': 'PostgreSQL' },
+        { 'name': 'golang', 'title': 'Golang' },
+        { 'name': 'java', 'title': 'Java' },
+        { 'name': 'springboot', 'title': 'Spring Boot' },
+        { 'name': 'django', 'title': 'Django' }
+      ],
       logo: <BackendIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
     },
     {
       title: 'Data ',
       description: 'I\'ve done machine learning classification, regression, and clustering, including NLP, and Knowledge Graph datasets on campus',
       icons: ['python', 'postgresql', 'pandas', 'numpy', 'seaborn', 'scikitlearn'],
-      logo: <DataScienceIcon className='h-[150px] text-neutral-400 fill-neutral-400' />
+      techs: [
+        { 'name': 'python', 'title': 'Python' },
+        { 'name': 'postgresql', 'title': 'PostgreSQL' },
+        { 'name': 'pandas', 'title': 'Pandas' },
+        { 'name': 'numpy', 'title': 'Numpy' },
+        { 'name': 'seaborn', 'title': 'Seaborn' },
+        { 'name': 'scikitlearn', 'title': 'Scikit-learn' }
+      ],
+      logo: <DataScienceIcon className='h-[150px] text-neutral-400 fill-neutral-400' />,
     }
   ]
 
@@ -55,12 +78,14 @@ const Skills = ({ className }: SkillsProps) => {
                   </div>
                 </CardBody>
                 <CardFooter className='text-neutral-400 justify-center gap-3 flex-wrap md:flex-nowrap grayscale group-hover:grayscale-0 transition duration-200'>
-                  {skill.icons.map((icon, index) => {
-                    const elem = mapIcon(icon, 'w-full h-full')
+                  {skill.techs.map((tech, index) => {
+                    const elem = mapIcon(tech.name, 'w-full h-full')
                     return elem ? (
-                      <div key={index} className='h-[30px] w-[30px] text-white'>
-                        {elem}
-                      </div>
+                      <Tooltip content={tech.title} key={index}>
+                        <div className='h-[30px] w-[30px] text-white'>
+                          {elem}
+                        </div>
+                      </Tooltip>
                     ) : null
                   })}
                 </CardFooter>

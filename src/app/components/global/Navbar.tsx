@@ -60,8 +60,8 @@ const Navbar = () => {
 	}, []);
 
     return (
-        <div className={`w-full flex justify-center sticky top-0 z-50 pt-0 lg:pt-3`}>
-            <nav className={`rounded-lg md:rounded-t-none md:rounded-b-lg lg:rounded-lg flex border-1 w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-900/60 backdrop-blur-md'}  lg:justify-center`}>
+        <div className={`w-full hidden md:flex justify-center sticky top-0 z-50 pt-0 lg:pt-3`}>
+            <nav className={`rounded-lg md:rounded-t-none md:rounded-b-lg lg:rounded-lg flex border-1 border-t-0 w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? 'bg-transparent border-transparent' : 'border-white/5 shadow-xl bg-neutral-900/60 backdrop-blur-md'}  lg:justify-center`}>
                 <div className="w-full lg:w-[1024px] flex justify-between items-center px-6">
                     <div className="w-full md:w-auto">
                         <Button onPress={scrollToTop} disableRipple className="text-2xl p-0 bg-transparent gap-1">

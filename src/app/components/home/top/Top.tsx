@@ -1,5 +1,5 @@
 import React from 'react'
-import About from './About'
+import Summary from './Summary'
 import Skills from './Skills'
 
 interface TopProps {
@@ -9,8 +9,8 @@ interface TopProps {
 const Top = ({className}: TopProps) => {
   return (
     <section id='top' className={className}>
-      <About />
-      <Skills className='mt-10'/>
+      <Summary />
+      <Skills className='mt-14'/>
     </section>
   )
 }

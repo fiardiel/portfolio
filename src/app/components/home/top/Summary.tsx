@@ -2,7 +2,7 @@
 
 import HomeTypeWriter from '@/components/home/top/HomeTypeWriter'
 import Reveal from '@/components/utils/Reveal'
-import { Button } from '@nextui-org/react'
+import { Button, Tooltip } from '@nextui-org/react'
 import { Link } from '@nextui-org/react'
 import React from 'react'
 import { Image } from "@nextui-org/image"
@@ -16,7 +16,7 @@ interface AboutProps {
   className?: string
 }
 
-const About = ({ className }: AboutProps) => {
+const Summary = ({ className }: AboutProps) => {
   const socialLinks = [
     { name: "Github", icon: <GithubIcon  />, href: "https://github.com/fiardiel" },
     { name: "LinkedIn", icon: <LinkedinIcon /> , href: "https://www.linkedin.com/in/rafiardiel" },
@@ -25,28 +25,30 @@ const About = ({ className }: AboutProps) => {
     
   ]
   return (
-    <div id='top' className={className}>
+    <div className={className}>
       <Reveal>
-        <div className="md:grid lg:grid-cols-[auto,1fr] lg:auto-cols-min lg:gap-12 flex flex-col-reverse items-center">
+        <div className="lg:gap-16 flex items-center">
           <div className="flex flex-col w-full items-start">
             <div>
-              <h1 className={`font-sans text-5xl`}>Hello<span className="text-blue-600">, World!</span></h1>
-              <h1 className='text-5xl font-semibold'>I'm Rafi Ardiel Erinaldi</h1>
-              <HomeTypeWriter className="mt-1 text-gray-400/90" />
-              <p className="mb-4 mt-2 font-light text-gray-400 text-lg text-start">
+              <h1 className={`text-5xl`}>Hello<span className="text-blue-600">, World!</span></h1>
+              <h1 className='text-5xl'><span>I'm </span> <span className='font-semibold'>Rafi Ardiel Erinaldi</span></h1>
+              <HomeTypeWriter className="text-4xl text-start mt-2 text-gray-400/90" />
+              <p className="mb-4 mt-3 font-light text-gray-400 text-lg text-start">
                 A Full-stack Engineer specializing in Next.js and
-                Django Rest Framework / Springboot. Currently a Web
+                Django Rest Framework / Springboot, also a data science enthusiast. Currently a Web
                 Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="text-lg transition-colors duration-300 hover:opacity-100 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red text-primary hover:text-white"> PT. Samakta Mitra</Link>
               </p>
             </div>
 
             <div className='flex justify-center md:justify-start gap-3'>
               {socialLinks.map((item, index) => (
-                <Link key={index} href={item.href} className='transition hover:opacity-100 hover:-translate-y-1 underline-animation underline-animation-white hover:scale-105 pb-2'>
-                  <div className='h-[30px] w-[30px]'>
-                    {item.icon}
-                  </div>
-                </Link>
+                <Tooltip key={index} content={item.name}>
+                  <Link href={item.href} className='transition hover:opacity-100 hover:-translate-y-1 underline-animation underline-animation-white hover:scale-105 pb-2'>
+                    <div className='h-[30px] w-[30px]'>
+                      {item.icon}
+                    </div>
+                  </Link>
+                </Tooltip>
               ))}
             </div>
             <div>
@@ -62,7 +64,7 @@ const About = ({ className }: AboutProps) => {
               </Button>              
             </div>
           </div>
-          <div className="hidden lg:block w-[250px] h-[250px] lg:w-[334px] lg:h-[334px] mb-10 md:mb-0 opacity-70 grayscale transition hover:grayscale-0 hover:opacity-100 md:self-start">
+          <div className="hidden lg:block opacity-70 grayscale transition hover:grayscale-0 hover:opacity-100 max-w-[358px]">
             <Image
               src="/images/rafibulet.png"
               alt="rafi ardiel"
@@ -75,4 +77,4 @@ const About = ({ className }: AboutProps) => {
   )
 }
 
-export default About
+export default Summary

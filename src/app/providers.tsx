@@ -3,9 +3,14 @@
 import { NextUIProvider } from '@nextui-org/react'
 import React from 'react'
 
-const Providers = ({ children }: { children: React.ReactNode }) => {
+interface ProvidersProps {
+  font?: string
+  children: React.ReactNode
+}
+
+const Providers: React.FC<ProvidersProps> = ({font, children}) => {
   return (
-    <NextUIProvider>
+    <NextUIProvider className={font}>
       {children}
     </NextUIProvider>
   )

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/globals.css";
-import Navbar from "@/components/page/Navbar";
-import SmallNavbar from "@/components/page/SmallNavbar";
+import Navbar from "@/components/global/Navbar";
+import SmallNavbar from "@/components/global/SmallNavbar";
 import Providers from "@/providers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth dark">
       <body className={`${inter.className} font-sans dark bg-black text-foreground`}>
-        <Providers>
+        <Providers font={inter.className}>
           <Navbar />
-          {children}
           <SmallNavbar />
+          {children}
         </Providers>
       </body>
     </html>
