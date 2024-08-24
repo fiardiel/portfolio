@@ -118,7 +118,7 @@ const Projects = ({className}: ProjectsProps) => {
                       </Tooltip>
                     </div>
                     <div>
-                      <Tooltip content='Project Github repository'>
+                      <Tooltip content='Project repository'>
                         <Button radius='sm' variant='bordered' isDisabled={project.isGithubDisabled} isIconOnly className='group hover:bg-primary hover:border-0' as={Link} href={`https://github.com/${project.githubLink}`}>
                           <FiGithub className='group-hover:fill-white' size={22} />
                         </Button>
