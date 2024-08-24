@@ -27,7 +27,7 @@ const Summary = ({ className }: AboutProps) => {
     <div className={className}>
       <Reveal>
         <div className="lg:gap-16 flex items-center">
-          <div className="flex flex-col w-full items-start">
+          <div className="flex flex-col lg:w-3/5 items-start">
             <div>
               <h1 className={`text-5xl`}>Hello<span className="text-blue-600">, World!</span></h1>
               <h1 className='text-5xl'><span>I&apos;m </span> <span className='font-semibold'>Rafi Ardiel Erinaldi</span></h1>
@@ -63,11 +63,12 @@ const Summary = ({ className }: AboutProps) => {
               </Button>              
             </div>
           </div>
-          <div className="hidden lg:block opacity-70 grayscale transition hover:grayscale-0 hover:opacity-100 max-w-[358px]">
+          <div className="hidden w-2/5 lg:block opacity-70 grayscale transition hover:grayscale-0 hover:opacity-100">
             <Image
+              removeWrapper
               src="/images/rafibulet.png"
               alt="rafi ardiel"
-              className="rounded-full shadow-xl shadow-white/50"
+              className="rounded-full shadow-xl shadow-white/50 object-cover"
             ></Image>
           </div>
         </div>

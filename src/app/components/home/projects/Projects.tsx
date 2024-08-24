@@ -85,7 +85,7 @@ const Projects = ({className}: ProjectsProps) => {
                       <NextImage removeWrapper className='absolute object-cover w-full h-full rounded-sm rounded-b-none' src={project.img ? `/images/projects/${project.img}` : fallbackSrc} fallbackSrc={fallbackSrc} />
                     </div>
                   </CardHeader>
-                  <CardBody className='items-start p-5 pb-0'>
+                  <CardBody className='items-start p-5 pb-0 h-auto'>
                     <div className='flex flex-row gap-2 h-[22px]'>
                       {project.tools.map((tool, index) => (
                         <Tooltip key={index} content={tool.title}>

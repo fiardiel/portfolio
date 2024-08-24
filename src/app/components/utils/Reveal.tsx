@@ -21,7 +21,7 @@ const Reveal = ({ children, width = '100%', className }: Props) => {
   return (
     <motion.div
       ref={ref}
-      style={ { width, position: 'relative' } }
+      style={ {  } }
       variants={{
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 },
