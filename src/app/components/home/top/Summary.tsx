@@ -35,7 +35,7 @@ const Summary = ({ className }: AboutProps) => {
               <p className="mb-4 mt-3 font-light text-gray-400 text-lg text-start">
                 A Full-stack Engineer specializing in Next.js and
                 Django Rest Framework / Springboot, also a data science enthusiast. Currently a Web
-                Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="text-lg transition-colors duration-300 hover:opacity-100 underline md:no-underline underline-offset-2 md:underline-animation md:underline-animation-red text-primary hover:text-white"> PT. Samakta Mitra</Link>
+                Developer Intern at <Link href="https://www.linkedin.com/company/samakta-mitra---itaas/" className="text-lg transition-colors duration-300 hover:opacity-100 underline-animation underline-animation-red text-primary hover:text-white"> PT. Samakta Mitra</Link>
               </p>
             </div>
 

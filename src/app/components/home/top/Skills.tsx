@@ -60,9 +60,9 @@ const Skills = ({ className }: SkillsProps) => {
   return (
     <div>
       <div className={`flex flex-col w-full items-center md:items-start ${className}`}>
-        <div className='flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        <div className='flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch'>
           {skills.map((skill, index) => (
-            <Reveal key={index} className='h-full'>
+            <Reveal key={index} className=''>
               <Card radius='sm' className='w-full h-full p-3 border-1 border-neutral-700/60 hover:border-neutral-700/70 bg-neutral-950 hover:bg-neutral-900 group'>
                 <CardHeader className='justify-center'>
                   <div className='flex flex-col items-center space-y-3'>
@@ -70,7 +70,7 @@ const Skills = ({ className }: SkillsProps) => {
                     <p className='text-xl text-center text-primary-600 group-hover:text-primary font-medium transition duration-200'>{skill.title} <span className='text-white font-normal'>Engineering</span></p>
                   </div>
                 </CardHeader>
-                <CardBody className='pt-0 items-center overflow-y-hidden'>
+                <CardBody className='pt-0 items-center'>
                   <div className='flex flex-col items-center'>
                     <p className='text-sm text-neutral-400 text-center'>
                       {skill.description}
