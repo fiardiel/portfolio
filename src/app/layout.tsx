@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full scroll-smooth dark">
-      <body className={`${inter.className} dark bg-black text-foreground overscroll-none`}>
+    <html lang="en" className="h-full dark">
+      <body className={`${inter.className} dark bg-black text-foreground overscroll-none scroll-smooth`}>
         <Providers font={inter.className}>
           <Navbar />
           <SmallNavbar />
