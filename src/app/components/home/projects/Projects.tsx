@@ -33,7 +33,7 @@ const Projects = ({className}: ProjectsProps) => {
       name: 'PT. Samakta Mitra Company Profile',
       description: 'Created the front-end and back-end of the article page of Samakta Mitra\'s company profile web page',
       img: 'sam-web.png',
-      projectLink: 'https://samakta-mitra.vercel.app/',
+      projectLink: 'https://beta.onesmartservices.com/articles',
       projectType: 'Full-stack',
       githubLink: 'fiardiel/sam-web/',
       tools: [
@@ -44,7 +44,7 @@ const Projects = ({className}: ProjectsProps) => {
         { name: 'python', title: 'Python' },
         { name: 'directus', title: 'Directus' }
       ],
-      isProjectDisabled: true,
+      isProjectDisabled: false,
       isGithubDisabled: true
     },
     {
@@ -70,7 +70,7 @@ const Projects = ({className}: ProjectsProps) => {
   return (
     <section id="projects">
       <div className={'flex flex-col items-center md:items-start w-full ' + className}>
-        <Reveal className='text-start w-full'>
+        <Reveal className='text-start w-ful'>
           <p className='text-4xl font-semibold decoration-4 underline underline-offset-8 decoration-blue-500'>
             Projects
           </p>
