@@ -111,14 +111,18 @@ const Projects = ({className}: ProjectsProps) => {
                   </CardBody>
                   <CardFooter className='justify-start items-center gap-3 p-5'>
                     <div>
-                      <Button variant='bordered' radius='sm' isDisabled={project.isProjectDisabled} isIconOnly className='bg-transparent hover:border-none group hover:bg-primary' as={Link} href={project.projectLink}>
-                        <MdArrowForwardIos className='group-hover:fill-current group-hover:text-white' size={18} />
-                      </Button>
+                      <Tooltip content='See project'>
+                        <Button variant='bordered' radius='sm' isDisabled={project.isProjectDisabled} isIconOnly className='bg-transparent hover:border-none group hover:bg-primary' as={Link} href={project.projectLink}>
+                          <MdArrowForwardIos className='group-hover:fill-current group-hover:text-white' size={18} />
+                        </Button>
+                      </Tooltip>
                     </div>
                     <div>
-                      <Button radius='sm' variant='bordered' isDisabled={project.isGithubDisabled} isIconOnly className='group hover:bg-primary hover:border-0' as={Link} href={`https://github.com/${project.githubLink}`}>
-                        <FiGithub className='group-hover:fill-white' size={22} />
-                      </Button>
+                      <Tooltip content='Project Github repository'>
+                        <Button radius='sm' variant='bordered' isDisabled={project.isGithubDisabled} isIconOnly className='group hover:bg-primary hover:border-0' as={Link} href={`https://github.com/${project.githubLink}`}>
+                          <FiGithub className='group-hover:fill-white' size={22} />
+                        </Button>
+                      </Tooltip>
                     </div>
                   </CardFooter>
                 </Card>
