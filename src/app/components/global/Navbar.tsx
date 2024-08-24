@@ -36,7 +36,7 @@ const Navbar = () => {
 		const sections = document.querySelectorAll('section');
 		const options = {
 			root: null,
-			rootMargin: '-10px 0px 10px 0px',
+			rootMargin: '-40% 0px 40% 0px',
 			threshold: 0,
 		};
 
