@@ -66,7 +66,7 @@ const Summary = ({ className }: AboutProps) => {
           <div className="hidden w-2/5 lg:block opacity-70 grayscale transition hover:grayscale-0 hover:opacity-100">
             <Image
               removeWrapper
-              src="/images/rafibulet.png"
+              src="/images/profile.png"
               alt="rafi ardiel"
               className="rounded-full shadow-xl shadow-white/50 object-cover"
             ></Image>
