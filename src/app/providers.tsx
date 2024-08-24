@@ -10,7 +10,7 @@ interface ProvidersProps {
 
 const Providers: React.FC<ProvidersProps> = ({font, children}) => {
   return (
-    <NextUIProvider className={font + 'overscroll-none scroll-smooth'}>
+    <NextUIProvider className={font + ' overscroll-none scroll-smooth'}>
       {children}
     </NextUIProvider>
   )
