@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className='w-full border-t border-white/10 shadow-xl bg-neutral-900/60 backdrop-blur-md h-auto'>
       <div className='flex flex-col md:flex-row md:justify-between gap-y-4 items-center px-7 p-5 lg:w-[1024px] w-full mx-auto '>
-        <p className='text-neutral-500 hover:text-white transition duration-300'>© 2024 fiardiel. All rights reserved.</p>
+        <p className='text-neutral-500 hover:text-white transition duration-300'>© { new Date().getFullYear() } fiardiel. All rights reserved.</p>
         <div className='flex flex-wrap gap-3'>
           {socialLinks.map((item, index) => (
             <Tooltip key={index} content={item.name}>

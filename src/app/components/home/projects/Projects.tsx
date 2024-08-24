@@ -70,7 +70,7 @@ const Projects = ({className}: ProjectsProps) => {
   return (
     <section id="projects">
       <div className={'flex flex-col items-center md:items-start w-full ' + className}>
-        <Reveal className='text-start'>
+        <Reveal className='text-start w-full'>
           <p className='text-4xl font-semibold decoration-4 underline underline-offset-8 decoration-blue-500'>
             Projects
           </p>
