@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full dark">
-      <body className={`${inter.className} dark bg-black text-foreground overflow-hidden`}>
+      <body className={`${inter.className} dark bg-black text-foreground`}>
         <Providers font={inter.className}>
           <Navbar />
           <SmallNavbar />
