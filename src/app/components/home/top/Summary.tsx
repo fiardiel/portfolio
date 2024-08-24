@@ -42,7 +42,7 @@ const Summary = ({ className }: AboutProps) => {
             <div className='flex justify-center md:justify-start gap-3'>
               {socialLinks.map((item, index) => (
                 <Tooltip key={index} content={item.name}>
-                  <Link href={item.href} className='transition hover:opacity-100 hover:-translate-y-1 underline-animation underline-animation-white hover:scale-105 pb-2'>
+                  <Link href={item.href} className='transition hover:opacity-100 hover:-translate-y-1 hover:scale-105 pb-2'>
                     <div className='h-[30px] w-[30px]'>
                       {item.icon}
                     </div>
