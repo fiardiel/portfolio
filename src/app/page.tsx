@@ -1,13 +1,19 @@
 import React from 'react'
-import Top from '@/components/home/top/Top';
 import Projects from '@/components/home/projects/Projects';
+import { Image } from '@nextui-org/react';
+import { MdArrowDownward } from 'react-icons/md';
+import Top from '@/components/home/top/Top';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between px-6">
-      <div className="flex flex-col justify-center md:flex md:items-center w-full lg:w-[1024px] px-0 lg:px-6 py-10 md:pt-16 pt-5">
-        <Top className='mt-10 md:mt-0' />
-        <Projects className='mt-28' />
+    <main className="flex flex-col items-center justify-between px-6 lg:px-0">
+      <div className='w-full h-screen opacity-40 z-0 absolute top-0'>
+        <Image removeWrapper src='/images/topbg.jpeg' className='object-cover md:object-cover h-full w-full' />
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-transparent to-black/80" style={{ backgroundImage: 'linear-gradient(to top, transparent 75%, black 100%)' }}></div>
+      </div>
+      <div className="flex flex-col justify-center md:flex md:items-center w-full lg:w-[1024px] lg:px-6 pb-10 z-[1]">
+        <Top className='relative flex items-center lg:-mt-[5.75rem] -mt-[73px] h-screen' />
+        <Projects className='mt-20' />
       </div>
     </main>
   );
