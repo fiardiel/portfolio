@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Card, CardBody, CardFooter, CardHeader, Chip, Link, Tooltip } from '@nextui-org/react'
+import { Button, Card, CardBody, CardFooter, CardHeader, Link, Tooltip } from '@nextui-org/react'
 import React from 'react'
 import { Image as NextImage } from '@nextui-org/react'
 import Reveal from '@/components/utils/Reveal'
@@ -71,11 +71,11 @@ const Projects = ({className}: ProjectsProps) => {
     <section id="projects">
       <div className={'flex flex-col items-center md:items-start w-full ' + className}>
         <Reveal className='text-start w-full'>
-          <p className='text-3xl md:text-4xl font-semibold decoration-4 underline underline-offset-8 decoration-blue-500'>
+          <p className='text-3xl md:text-4xl font-medium text-blue-500  '>
             Projects
           </p>
         </Reveal>
-        <div className='flex flex-col mt-10 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 w-full items-stretch'>
+        <div className='flex flex-col mt-8 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 w-full items-stretch'>
           {projects.map((project, index) => (
             <Reveal key={index} className='flex justify-center items-stretch'>
               <div className='w-full h-full'>

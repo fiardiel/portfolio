@@ -3,8 +3,7 @@
 import { HiMiniCodeBracket } from 'react-icons/hi2';
 import { Button } from '@nextui-org/react';
 import { GrHomeRounded } from "react-icons/gr";
-import { BsBriefcase } from "react-icons/bs";
-import { FiBriefcase, FiPhone, FiStar } from 'react-icons/fi';
+import { FiPhone, FiStar } from 'react-icons/fi';
 import { scrollToElementById, scrollToTop } from '@/utils';
 import React, { useEffect, useState } from 'react';
 
@@ -17,8 +16,9 @@ interface menuItem {
 const SmallNavbar = () => {
     const menuItems: menuItem[] = [
         { name: 'Home', href: 'top', icon: <GrHomeRounded size={22} /> },
+        { name: 'Skills', href: 'skills', icon: <FiStar size={25} /> },
         { name: 'Projects', href: 'projects', icon: <HiMiniCodeBracket size={25} /> },
-        { name: 'Experiences', href: 'experiences', icon: <FiBriefcase size={25} /> },
+        { name: 'Contact', href: 'contact', icon: <FiPhone size={25} /> },
 		]
 		
 		const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +64,7 @@ const SmallNavbar = () => {
 	}, []);
 
     return (
-        <div className='md:hidden sticky top-0 z-50'>
+        <div className='md:hidden fixed top-0 z-50 w-full'>
             <div className={`transition duration-500 p-3 border border-t-0 border-transparent ${isScrolled ? 'border-white/10 shadow-lg bg-neutral-900/60 backdrop-blur-md rounded-b-xl' : ''}`}>
                 <div className="flex justify-between items-center px-3 p-1">
                     {menuItems.map((item, index) => (
