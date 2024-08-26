@@ -6,7 +6,7 @@ import Reveal from '@/components/utils/Reveal';
 import { FrontendIcon } from '@/components/icons/FrontendIcon';
 import DataScienceIcon from '@/components/icons/DataScienceIcon';
 import { mapIcon } from '@/components/utils/IconMapper';
-import { Tooltip } from '@nextui-org/react';
+import { Chip, Tooltip } from '@nextui-org/react';
 import Marquee from 'react-fast-marquee';
 
 interface SkillsProps {
@@ -55,17 +55,13 @@ const Skills = ({ className }: SkillsProps) => {
           <p className='text-3xl md:text-4xl font-semibold text-white'>
             Skills & <span className='font-normal text-blue-500'>Services</span>
           </p>
+          <Chip color='default' size='lg' radius='md' variant='bordered' className='mt-5'>
+            Tech stack
+          </Chip>
         </Reveal>
-        <div className='mt-8 w-full'>
+        <div className='mt-5 w-full'>
           <Reveal>
             <Card className='w-full p-4 bg-neutral-950 border border-neutral-800/70'>
-              <CardHeader className='text-2xl bg-neutral-950'>
-                <div className='rounded-xl px-4 p-2 border border-neutral-800'>
-                  <p className='text-sm md:text-medium'>
-                    Tech Stack
-                  </p>
-                </div>
-              </CardHeader>
               <CardBody className='bg-neutral-950'>
                 <Marquee className='min-w-[100%]' pauseOnClick speed={70}>
                   {techStacks.map((tech, index) => (
@@ -87,9 +83,9 @@ const Skills = ({ className }: SkillsProps) => {
             <Reveal key={index} className=''>
               <Card radius='sm' className='w-full h-full p-3 border-1 border-neutral-700/60 hover:border-neutral-700/70 bg-neutral-950 hover:bg-neutral-900 group'>
                 <div className='flex absolute top-7 pl-4 gap-2'>
-                  <div className='h-2 w-2 md:h-3 md:w-3 bg-red-500 rounded-full'></div>
-                  <div className='h-2 w-2 md:h-3 md:w-3 bg-yellow-500 rounded-full'></div>
-                  <div className='h-2 w-2 md:h-3 md:w-3 bg-green-500 rounded-full'></div>
+                  <div className='h-3 w-3 bg-red-500 rounded-full'></div>
+                  <div className='h-3 w-3 bg-yellow-500 rounded-full'></div>
+                  <div className='h-3 w-3 bg-green-500 rounded-full'></div>
                 </div>
                 <CardHeader className='justify-center mt-5'>
                   <div className='flex flex-col items-center space-y-3'>

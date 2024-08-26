@@ -14,8 +14,9 @@ export default function Home() {
       </div>
       <div className="flex flex-col justify-center md:flex md:items-center w-full lg:w-[1024px] lg:px-6 pb-10 z-[1]">
         <Top className='relative flex items-center h-screen' />
-        <Skills className='my-28 mt-20' />
-        <Projects className='my-28' />
+        <Skills className='mt-20' />
+        <Projects className='mt-28' />
+        <div className='mt-28'></div>
       </div>
     </main>
   );
