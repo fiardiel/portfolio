@@ -29,7 +29,7 @@ export default function Home() {
           }}
         ></div>
       </div>
-      <div className="flex flex-col justify-center md:flex md:items-center w-full lg:w-[1024px] lg:px-6 pb-10 z-[1]">
+      <div className="flex flex-col justify-center md:flex md:items-center w-full lg:w-[1024px] lg:px-6 z-[1]">
         <Top className="relative flex items-center h-screen md:h-[82dvh]" />
         <Skills className="mt-10" />
         <Projects className="mt-24" />
@@ -41,7 +41,7 @@ export default function Home() {
           alt="Contact background"
           className="top-0 absolute object-cover h-full z-0 w-full lg:w-[1024px] rounded-xl blur-md opacity-60"
         />
-        <Contact className="lg:w-[1024px] lg:p-6 z-10" />
+        <Contact className="lg:w-[1024px] lg:p-6 lg:pt-0 z-10" />
       </div>
     </main>
   );
