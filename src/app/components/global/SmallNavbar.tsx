@@ -71,7 +71,7 @@ const SmallNavbar = () => {
     return (
         <div className="md:hidden fixed top-0 z-50 w-full">
             <div
-                className={`transition duration-500 p-3 border border-t-0 border-transparent ${isScrolled ? "border-white/10 shadow-lg bg-neutral-900/60 backdrop-blur-md rounded-b-xl" : ""}`}
+                className={`transition duration-500 p-3 border border-t-0 border-transparent ${isScrolled ? "border-white/10 shadow-lg bg-black/60 backdrop-blur-md" : ""}`}
             >
                 <div className="flex justify-between items-center px-3 p-1">
                     {menuItems.map((item, index) => (
