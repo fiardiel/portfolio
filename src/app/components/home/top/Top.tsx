@@ -90,7 +90,7 @@ const Top = ({ className }: TopProps) => {
                     href={item.href}
                     className="transition hover:opacity-100 hover:-translate-y-1 hover:scale-105 mb-2"
                   >
-                    <div className="h-[25px] w-[25px] md:h-[30px] md:w-[30px]">
+                    <div className="h-[30px] w-[30px]">
                       {item.icon}
                     </div>
                   </Link>
