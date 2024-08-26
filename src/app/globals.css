@@ -23,23 +23,23 @@ body {
 }
 
 @layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
 @layer components {
-    .underline-animation {
-		@apply relative;
-	}
+  .underline-animation {
+    @apply relative;
+  }
 
-	.underline-animation::after {
-		@apply absolute content-[''] w-full h-[3px] left-0 bottom-[-0px] scale-x-0 hover:scale-x-100 origin-bottom-left hover:origin-bottom-left transition-transform duration-300 bg-primary;
-	}
+  .underline-animation::after {
+    @apply absolute content-[''] w-full h-[3px] left-0 bottom-[-0px] scale-x-0 hover:scale-x-100 origin-bottom-left hover:origin-bottom-left transition-transform duration-300 bg-primary;
+  }
 
   .underline-animation-red::after {
     @apply bg-red-500;
-	}
+  }
 
   .underline-animation-blue::after {
     @apply bg-primary;
