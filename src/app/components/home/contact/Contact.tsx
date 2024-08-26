@@ -1,9 +1,7 @@
 "use client";
 
-import GithubIcon from "@/components/icons/GithubIcon";
 import InstagramIcon from "@/components/icons/InstagramIcon";
 import LinkedinIcon from "@/components/icons/LinkedinIcon";
-import SpotifyIcon from "@/components/icons/SpotifyIcon";
 import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import Reveal from "@/components/utils/Reveal";
 import {
@@ -18,8 +16,9 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
-import { CiMail } from "react-icons/ci";
+import { BiPaperPlane } from "react-icons/bi";
 import { FaPaperPlane } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
 
 interface ContactProps {
   className?: string;
@@ -56,18 +55,21 @@ const Contact = ({ className }: ContactProps) => {
   return (
     <section id="contact" className={className}>
       <Reveal>
+        <div className="flex items-center">
+          <Chip
+            color="default"
+            size="lg"
+            variant="bordered"
+            radius="md"
+            className="bg-black"
+          >
+            Contact
+          </Chip>
+          <div className="relative ml-8 w-full rounded-full md:w-auto md:flex-grow h-0.5 bg-white opacity-20" />
+        </div>
         <div className="flex flex-col md:grid grid-cols-2 gap-8">
           <div className="flex flex-col">
-            <Chip
-              color="default"
-              size="lg"
-              variant="bordered"
-              radius="md"
-              className="bg-black"
-            >
-              Contact
-            </Chip>
-            <p className="text-4xl md:text-5xl font-semibold mt-5 z-10">
+            <p className="text-4xl md:text-5xl font-semibold mt-8 z-10">
               <span className="z-20">Need a hand on your</span>{" "}
               <span className="font-medium text-primary">project?</span>{" "}
               <span className="underline underline-offset-4 decoration-primary">
@@ -81,8 +83,7 @@ const Contact = ({ className }: ContactProps) => {
             >
               <div className="flex gap-4 -ml-2">
                 <div className="p-2 bg-primary-500 rounded-xl my-0.5">
-                  {" "}
-                  <CiMail size={20} />{" "}
+                  <LuMail size={20} />
                 </div>
                 <div className="flex flex-col items-start">
                   <p className="text-neutral-50">Mail me via Gmail at</p>
@@ -109,7 +110,7 @@ const Contact = ({ className }: ContactProps) => {
               <p className="text-xl"> Send me a message </p>
             </CardHeader>
             <CardBody className="gap-4">
-              <Input label="Name" variant="bordered"/>
+              <Input label="Name" variant="bordered" />
               <Input
                 variant="bordered"
                 label="Email"
@@ -130,7 +131,7 @@ const Contact = ({ className }: ContactProps) => {
               <Button
                 color="primary"
                 radius="md"
-                endContent={<FaPaperPlane />}
+                endContent={<FaPaperPlane size={15}/>}
                 className="flex mt-4 gap-3 self-start"
               >
                 Send

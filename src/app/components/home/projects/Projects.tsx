@@ -87,15 +87,18 @@ const Projects = ({ className }: ProjectsProps) => {
         }
       >
         <Reveal className="text-start w-full">
-          <Chip
-            color="default"
-            size="lg"
-            variant="bordered"
-            radius="md"
-            className="bg-black"
-          >
-            Projects
-          </Chip>
+          <div className="flex items-center">
+            <Chip
+              color="default"
+              size="lg"
+              variant="bordered"
+              radius="md"
+              className="bg-black"
+            >
+              Projects
+            </Chip>
+            <div className="relative ml-8 w-full rounded-full md:w-auto md:flex-grow h-0.5 bg-white opacity-20" />
+          </div>
         </Reveal>
         <div className="flex flex-col mt-8 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 w-full items-stretch">
           {projects.map((project, index) => (

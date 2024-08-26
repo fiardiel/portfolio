@@ -8,16 +8,16 @@ import Contact from "./components/home/contact/Contact";
 export default function Home() {
   return (
     <main className="w-full flex flex-col items-center justify-between px-6 lg:px-0">
-      <div className="w-full h-screen opacity-50 z-0 absolute top-0 blur-md">
+      <div className="w-full h-screen brightness-50 z-0 absolute top-0 blur-xl">
         <Image
           removeWrapper
-          src="/images/umbra-12.jpeg"
+          src="/images/aberrant-01.jpg"
           alt="Top background"
           className="hidden md:block object-cover h-full w-full"
         />
         <Image
           removeWrapper
-          src="/images/umbra-12.jpeg"
+          src="/images/aberrant-01.jpg"
           alt="Top background mobile"
           className="md:hidden h-full w-full"
         />

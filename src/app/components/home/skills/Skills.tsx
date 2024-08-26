@@ -68,17 +68,20 @@ const Skills = ({ className }: SkillsProps) => {
       >
         <div className="mt-5 w-full">
           <Reveal>
-            <Chip
-              color="default"
-              size="lg"
-              radius="md"
-              variant="bordered"
-              className="self-start"
-            >
-              Tech stack
-            </Chip>
-            <Card className="w-full p-4 bg-neutral-950 border border-neutral-800/70 mt-5">
-              <CardBody className="bg-neutral-950">
+            <div className="flex items-center">
+              <Chip
+                color="default"
+                size="lg"
+                variant="bordered"
+                radius="md"
+                className="bg-black"
+              >
+                Tech Stack
+              </Chip>
+              <div className="relative ml-8 w-full rounded-full md:w-auto md:flex-grow h-0.5 bg-white opacity-20" />
+            </div>
+            <Card className="w-full p-4 bg-neutral-950 border border-neutral-800/70 mt-5 hover:bg-neutral-900">
+              <CardBody>
                 <Marquee className="min-w-[100%]" pauseOnClick speed={70}>
                   {techStacks.map((tech, index) => (
                     <div
