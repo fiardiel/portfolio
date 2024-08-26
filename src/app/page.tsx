@@ -39,7 +39,7 @@ export default function Home() {
           removeWrapper
           src="/images/gauze-01.jpg"
           alt="Contact background"
-          className="object-scale-down absolute top-0 hidden md:block md:object-cover h-full z-0 w-full lg:w-[1024px] rounded-xl blur-md"
+          className="top-0 absolute object-cover h-full z-0 w-full lg:w-[1024px] rounded-xl blur-md opacity-60"
         />
         <Contact className="lg:w-[1024px] lg:p-6 z-10" />
       </div>
