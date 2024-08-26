@@ -88,11 +88,9 @@ const Top = ({ className }: TopProps) => {
             ></Image>
           </div>
         </div>
-        <Reveal>
-          <div className='flex w-full justify-center absolute bottom-6 animate-bounce'>
-            <MdArrowDownward size={40}/>
-          </div>
-        </Reveal>
+        <div className='flex w-full justify-center absolute bottom-6 animate-bounce'>
+          <MdArrowDownward size={40}/>
+        </div>
       </Reveal>
     </section>
   )

@@ -72,7 +72,7 @@ const Projects = ({className}: ProjectsProps) => {
       <div className={'flex flex-col items-center md:items-start w-full ' + className}>
         <Reveal className='text-start w-full'>
           <p className='text-3xl md:text-4xl font-semibold text-white  '>
-            Projects
+            Programming <span className='text-blue-500 font-medium'>Projects</span>
           </p>
         </Reveal>
         <div className='flex flex-col mt-8 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 w-full items-stretch'>

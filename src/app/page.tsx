@@ -3,6 +3,7 @@ import Projects from '@/components/home/projects/Projects';
 import { Image } from '@nextui-org/react';
 import Top from '@/components/home/top/Top';
 import Skills from './components/home/skills/Skills';
+import Contact from './components/home/contact/Contact';
 
 export default function Home() {
   return (
@@ -14,9 +15,12 @@ export default function Home() {
       </div>
       <div className="flex flex-col justify-center md:flex md:items-center w-full lg:w-[1024px] lg:px-6 pb-10 z-[1]">
         <Top className='relative flex items-center h-screen' />
-        <Skills className='mt-20' />
-        <Projects className='mt-28' />
-        <div className='mt-28'></div>
+        <Skills className='md:my-20 md:mt-10 mt-10' />
+        <Projects className='md:my-20 mt-28' />
+      </div>
+      <div className='flex justify-center relative w-full'>
+        <Image removeWrapper src='/images/umbra-12.jpeg' className='scale-x-[-1] absolute top-0 hidden md:block object-scale-down md:object-cover h-full w-full xl:w-[90%] z-0' />
+        <Contact className='lg:w-[1024px] lg:px-6 md:my-20 mb-28 mt-28 z-10' />
       </div>
     </main>
   );

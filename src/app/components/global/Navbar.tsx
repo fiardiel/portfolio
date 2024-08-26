@@ -2,7 +2,6 @@
 
 import { scrollToElementById, scrollToTop } from "@/utils";
 import { Button } from "@nextui-org/react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoIosCall } from "react-icons/io";
 
@@ -24,6 +23,7 @@ const Navbar = () => {
         { name: "Home", path: "top" },
         { name: "Skills", path: "skills" },
         { name: "Projects", path: "projects" },
+        { name: "Contact", path: "contact" },
     ]
 
     const [activeSection, setActiveSection] = useState('top');
@@ -81,8 +81,7 @@ const Navbar = () => {
                     </div>
                     <div className="z-50 logo">
                         <Button
-                            as={Link}
-                            href="/"
+                            onPress={() => scrollToElementById('contact')}
                             className="transition-transform- hover:shadow-primary/50 border-2 border-primary/30"
                             color="primary"
                             radius="sm"

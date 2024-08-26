@@ -51,19 +51,14 @@ const Skills = ({ className }: SkillsProps) => {
   return (
     <section className='w-full lg:w-[1024px] md:px-6' id='skills'>
       <div className={`flex flex-col w-full items-center md:items-start ${className}`}>
-        <Reveal className='text-start w-full'>
-          <p className='text-3xl md:text-4xl font-semibold text-white'>
-            Skills & <span className='font-normal text-blue-500'>Services</span>
-          </p>
-          <Chip color='default' size='lg' radius='md' variant='bordered' className='mt-5'>
-            Tech stack
-          </Chip>
-        </Reveal>
         <div className='mt-5 w-full'>
           <Reveal>
             <Card className='w-full p-4 bg-neutral-950 border border-neutral-800/70'>
               <CardBody className='bg-neutral-950'>
-                <Marquee className='min-w-[100%]' pauseOnClick speed={70}>
+                <Chip color='default' size='lg' radius='md' variant='bordered' className='self-start'>
+                  Tech stack
+                </Chip>
+                <Marquee className='min-w-[100%] mt-8' pauseOnClick speed={70}>
                   {techStacks.map((tech, index) => (
                     <div key={index} className='p-4 mx-3 bg-neutral-800/60 backdrop-blur-lg border border-neutral-800/80 rounded-xl'>
                       <Tooltip content={tech.title}>
