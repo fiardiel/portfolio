@@ -83,7 +83,7 @@ const Skills = ({ className }: SkillsProps) => {
                   {techStacks.map((tech, index) => (
                     <div
                       key={index}
-                      className="p-4 mx-3 bg-neutral-800/60 backdrop-blur-lg border border-neutral-800/80 rounded-xl"
+                      className="p-3 mx-3 bg-neutral-800/60 backdrop-blur-lg border border-neutral-800/80 rounded-xl"
                     >
                       <Tooltip content={tech.title}>
                         <div className="h-[30px] w-[30px] text-white">

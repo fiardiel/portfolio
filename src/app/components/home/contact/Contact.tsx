@@ -109,8 +109,9 @@ const Contact = ({ className }: ContactProps) => {
               <p className="text-xl"> Send me a message </p>
             </CardHeader>
             <CardBody className="gap-4">
-              <Input label="Name" />
+              <Input label="Name" variant="bordered"/>
               <Input
+                variant="bordered"
                 label="Email"
                 type="email"
                 value={email}
@@ -119,11 +120,12 @@ const Contact = ({ className }: ContactProps) => {
                 color={isInvalid ? "danger" : "default"}
                 errorMessage="please enter a valid email"
               />
-              <Input label="Subject" />
+              <Input variant="bordered" label="Subject" />
               <Textarea
                 label="Tell us about your project"
                 required
                 labelPlacement="outside"
+                variant="bordered"
               />
               <Button
                 color="primary"
