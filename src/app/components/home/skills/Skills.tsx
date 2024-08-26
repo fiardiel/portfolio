@@ -62,7 +62,7 @@ const Skills = ({ className }: SkillsProps) => {
   ];
 
   return (
-    <section className="w-full lg:w-[1024px] md:px-6" id="skills">
+    <section className="w-full lg:w-[1024px] lg:px-6" id="skills">
       <div
         className={`flex flex-col w-full items-center md:items-start ${className}`}
       >
