@@ -64,7 +64,7 @@ const Navbar = () => {
       className={`w-full hidden md:flex justify-center fixed top-0 z-50 pt-0 lg:pt-3`}
     >
       <nav
-        className={`rounded-lg md:rounded-t-none md:rounded-b-lg lg:rounded-lg flex border-1 border-t-0 w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? "bg-transparent border-transparent" : "border-white/5 shadow-xl bg-neutral-900/60 backdrop-blur-md"}  lg:justify-center`}
+        className={`rounded-lg md:rounded-t-none md:rounded-b-lg lg:rounded-lg flex border-1 border-t-0 w-full lg:w-auto z-48 items-center h-20 transition duration-500 ${!isScrolled ? "bg-black/0 border-transparent" : "border-white/10 shadow-lg bg-black/50 backdrop-blur-lg"}  lg:justify-center`}
       >
         <div className="w-full lg:w-[1024px] md:px-6 flex justify-between items-center">
           <div className="w-full md:w-auto">
