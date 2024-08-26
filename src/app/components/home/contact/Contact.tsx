@@ -122,7 +122,7 @@ const Contact = ({ className }: ContactProps) => {
               />
               <Input variant="bordered" label="Subject" />
               <Textarea
-                label="Tell us about your project"
+                label="Tell me about your project"
                 required
                 labelPlacement="outside"
                 variant="bordered"
