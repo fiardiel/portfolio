@@ -71,6 +71,7 @@ const Projects = ({ className }: ProjectsProps) => {
         { name: "tailwind", title: "Tailwind CSS" },
         { name: "typescript", title: "TypeScript" },
         { name: "python", title: "Python" },
+        { name: "django", title: "Django" },
       ],
       isProjectDisabled: true,
       isGithubDisabled: false,
