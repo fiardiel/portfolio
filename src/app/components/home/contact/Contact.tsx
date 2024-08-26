@@ -16,7 +16,6 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
-import { BiPaperPlane } from "react-icons/bi";
 import { FaPaperPlane } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
 
@@ -33,6 +32,9 @@ const Contact = ({ className }: ContactProps) => {
 
     return validateEmail(email) ? false : true;
   }, [email]);
+
+  // form disabler for development only
+  const isFormDisabled = true
 
   const socialLinks = [
     {
@@ -80,13 +82,14 @@ const Contact = ({ className }: ContactProps) => {
               size="lg"
               color="primary"
               className="py-1.5 h-auto self-start mt-5"
+              onPress={() => window.open("mailto:rafivct@gmail.com")}
             >
               <div className="flex gap-4 -ml-2">
                 <div className="p-2 bg-primary-500 rounded-xl my-0.5">
                   <LuMail size={20} />
                 </div>
                 <div className="flex flex-col items-start">
-                  <p className="text-neutral-50">Mail me via Gmail at</p>
+                  <p className="text-neutral-50">Mail me at</p>
                   <p className="-mt-2 text-primary-700">rafivct@gmail.com</p>
                 </div>
               </div>
@@ -110,7 +113,12 @@ const Contact = ({ className }: ContactProps) => {
               <p className="text-xl"> Send me a message </p>
             </CardHeader>
             <CardBody className="gap-4">
-              <Input label="Name" variant="bordered" />
+              <Input
+                label="Name"
+                variant="bordered"
+                required
+                disabled={isFormDisabled}
+              />
               <Input
                 variant="bordered"
                 label="Email"
@@ -120,19 +128,30 @@ const Contact = ({ className }: ContactProps) => {
                 isInvalid={isInvalid}
                 color={isInvalid ? "danger" : "default"}
                 errorMessage="please enter a valid email"
+                required
+                disabled={isFormDisabled}
               />
-              <Input variant="bordered" label="Subject" />
+              <Input
+                variant="bordered"
+                label="Subject"
+                required
+                disabled={isFormDisabled}
+              />
               <Textarea
                 label="Tell me about your project"
                 required
                 labelPlacement="outside"
                 variant="bordered"
+                isRequired
+                disabled={isFormDisabled}
               />
               <Button
                 color="primary"
                 radius="md"
                 endContent={<FaPaperPlane size={15}/>}
                 className="flex mt-4 gap-3 self-start"
+                title="support@example.com"
+                disabled={isFormDisabled}
               >
                 Send
               </Button>
