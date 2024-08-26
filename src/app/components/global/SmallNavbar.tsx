@@ -6,6 +6,7 @@ import { GrHomeRounded } from "react-icons/gr";
 import { FiPhone, FiStar } from "react-icons/fi";
 import { scrollToElementById, scrollToTop } from "@/utils";
 import React, { useEffect, useState } from "react";
+import { LuLaptop2 } from "react-icons/lu";
 
 interface menuItem {
     name: string;
@@ -16,7 +17,7 @@ interface menuItem {
 const SmallNavbar = () => {
     const menuItems: menuItem[] = [
         { name: "Home", href: "top", icon: <GrHomeRounded size={20} /> },
-        { name: "Skills", href: "skills", icon: <FiStar size={20} /> },
+        { name: "Techs", href: "skills", icon: <LuLaptop2 size={20} /> },
         {
             name: "Projects",
             href: "projects",
