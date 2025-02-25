@@ -72,13 +72,13 @@ const Top = ({ className }: TopProps) => {
               <p className="text-sm mb-4 mt-3 font-light text-gray-400 md:text-lg text-start">
                 A Full-stack Engineer specializing in Next.js and Django Rest
                 Framework / Springboot, also a data science enthusiast.
-                Currently a Web Developer Intern at{" "}
+                Currently an Advanced Computing student at{" "}
                 <Link
-                  href="https://www.linkedin.com/company/samakta-mitra---itaas/"
+                  href="https://www.anu.edu.au/"
                   className="text-sm md:text-lg transition-colors duration-300 hover:opacity-100 underline-animation underline-animation-red text-primary hover:text-white"
                 >
                   {" "}
-                  PT. Samakta Mitra
+                  Australian National University
                 </Link>
               </p>
             </div>

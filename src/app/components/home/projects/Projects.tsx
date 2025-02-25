@@ -76,6 +76,41 @@ const Projects = ({ className }: ProjectsProps) => {
       isProjectDisabled: true,
       isGithubDisabled: false,
     },
+    {
+      name: "BudidayaPlus",
+      description:
+        "An e-fishery application for catfish farming by Dimensi Kreasi Nusantara and Software Engineering Project Courses of Universitas Indonesia.",
+      img: "budidayaplus.png",
+      githubLink: "fiardiel/dkn-budidayaplus-frontend/",
+      projectType: "Full-stack",
+      projectLink: "https://103.177.95.189:3000/",
+      tools: [
+        { name: "nextJS", title: "Next.js" },
+        { name: "tailwind", title: "Tailwind CSS" },
+        { name: "typescript", title: "TypeScript" },
+        { name: "python", title: "Python" },
+        { name: "django", title: "Django" },
+      ],
+      isProjectDisabled: false,
+      isGithubDisabled: false,
+    },
+    {
+      name: "OSINT",
+      description:
+        "Upcoming TechLauncher ANU project",
+      img: null,
+      githubLink: "",
+      projectType: "Full-stack + ML",
+      projectLink: "",
+      tools: [
+        { name: "nextJS", title: "Next.js" },
+        { name: "tailwind", title: "Tailwind CSS" },
+        { name: "typescript", title: "TypeScript" },
+        { name: "python", title: "Python" },
+      ],
+      isProjectDisabled: true,
+      isGithubDisabled: true,
+    },
   ];
 
   const fallbackSrc = "/images/fallback.webp";
@@ -107,7 +142,7 @@ const Projects = ({ className }: ProjectsProps) => {
               <div className="w-full h-full">
                 <Card
                   radius="sm"
-                  className="w-full h-full hover:bg-neutral-900 border-1 border-neutral-700/60 hover:border-neutral-700/70 bg-neutral-950"
+                  className="w-full h-full hover:bg-neutral-900 border-1 border-neutral-700/60 hover:border-neutral-700/70 bg-neutral-950 hover:-translate-y-2"
                 >
                   <CardHeader className="flex flex-col items-start p-0">
                     <div className="w-full aspect-w-16 aspect-h-9">
