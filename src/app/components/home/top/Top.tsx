@@ -100,7 +100,7 @@ const Top = ({ className }: TopProps) => {
             <div>
               <Button
                 as={Link}
-                href="#projects"
+                href="https://drive.google.com/file/d/16-tTypeTw6ubwdJlUzGRcQvER1ZEWHXt/view?usp=sharing"
                 className="bg-black shadow-lg shadow-primary mt-4 hover:scale-105 hover:-translate-y-1 hover:text-white text-gray-400"
                 variant="bordered"
                 radius="full"

@@ -40,11 +40,11 @@ const Projects = ({ className }: ProjectsProps) => {
       isGithubDisabled: false,
     },
     {
-      name: "PT. Samakta Mitra Company Profile",
+      name: "OneSmartServices Articles Page",
       description:
         "Created the front-end and back-end of the article page of Samakta Mitra's company profile web page",
       img: "sam-web.png",
-      projectLink: "https://beta.onesmartservices.com/articles",
+      projectLink: "https://onesmartservices.com/articles",
       projectType: "Full-stack",
       githubLink: "fiardiel/sam-web/",
       tools: [
@@ -54,6 +54,22 @@ const Projects = ({ className }: ProjectsProps) => {
         { name: "typescript", title: "TypeScript" },
         { name: "python", title: "Python" },
         { name: "directus", title: "Directus" },
+      ],
+      isProjectDisabled: false,
+      isGithubDisabled: true,
+    },
+    {
+      name: "ANUISA Website",
+      description:
+        "Developed the ANUISA profile website",
+      img: "anuisa.png",
+      projectLink: "https://anuisa.org",
+      projectType: "Full-stack",
+      githubLink: "fiardiel/anuisa_proj/",
+      tools: [
+        { name: "nextJS", title: "Next.js" },
+        { name: "tailwind", title: "Tailwind CSS" },
+        { name: "typescript", title: "TypeScript" },
       ],
       isProjectDisabled: false,
       isGithubDisabled: true,
@@ -95,12 +111,12 @@ const Projects = ({ className }: ProjectsProps) => {
       isGithubDisabled: false,
     },
     {
-      name: "OSINT",
+      name: "TIMESpace",
       description:
         "Upcoming TechLauncher ANU project",
       img: null,
       githubLink: "",
-      projectType: "Full-stack + ML",
+      projectType: "Full-stack",
       projectLink: "",
       tools: [
         { name: "nextJS", title: "Next.js" },
